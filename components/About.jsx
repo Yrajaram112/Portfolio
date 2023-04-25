@@ -9,10 +9,10 @@ const About = () => {
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#5651e5]">About</p>
           <h2 className="py-4">Who I Am</h2>
-          <p className="py-2 text-gray-600">// It's the funny Fella in your Group</p>
+          <p className="py-2 text-gray-600">It&apos;s the funny Fella in your Group</p>
           <p className="py-2 text-gray-600">
-            I have completed my Bachelor's in Computer Science and Engineering
-            through Vellopre Institute of Technology. I discovered my love for
+            I have completed my Bachelor&apos;s in Computer Science and Engineering
+            through Vellore Institute of Technology. I discovered my love for
             Programming during my high school. I started exploring the domains and started working on minor college Projects.
           </p>
           <p className="py-2 text-gray-600">Fascinated with Development, I joined the YCO solutions and started my profession journey there.</p>
