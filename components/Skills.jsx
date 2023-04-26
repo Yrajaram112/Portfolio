@@ -1,6 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import htmlImg from "../public/assets/skills/html.png";
+import cssImg from "../public/assets/skills/css.png";
+import pythonImg from "../public/assets/skills/python.png";
+import djangoImg from "../public/assets/skills/django.png";
+import sqlImg from "../public/assets/skills/sql.png";
+import githubImg from "../public/assets/skills/github.png";
+import nextImg from "../public/assets/skills/nextjs.png";
+import javascriptImg from "../public/assets/skills/html.png";
 
 
 const Skills = () => {
@@ -34,7 +41,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                   src={htmlImg}
+                   src={cssImg}
                   width="64"
                   height="64"
                   alt="/"
@@ -50,7 +57,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src={htmlImg}
+                  src={javascriptImg}
                   width="64"
                   height="64"
                   alt="/"
@@ -66,7 +73,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                   src={htmlImg}
+                   src={nextImg}
                   width="64"
                   height="64"
                   alt="/"
@@ -82,7 +89,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src={htmlImg}
+                  src={djangoImg}
                   width="64"
                   height="64"
                   alt="/"
@@ -98,7 +105,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                   src={htmlImg}
+                   src={pythonImg}
                   width="64"
                   height="64"
                   alt="/"
@@ -114,14 +121,14 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                   src={htmlImg}
+                   src={githubImg}
                   width="64"
                   height="64"
                   alt="/"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
-                <h3>C/C++</h3>
+                <h3>Github</h3>
               </div>
             </div>
           </div>
@@ -130,7 +137,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                   src={htmlImg}
+                   src={sqlImg}
                   width="64"
                   height="64"
                   alt="/"

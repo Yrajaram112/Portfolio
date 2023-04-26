@@ -17,8 +17,8 @@ const property = () => {
           alt="/"
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-1">
-          <h2>Property Finder</h2>
-          <h3>React JS / Tailwind / Firebase</h3>
+          <h2>Kusom Alumni</h2>
+          <h3>Django / HTML / CSS</h3>
         </div>
       </div>
 
@@ -27,7 +27,7 @@ const property = () => {
           <p>Project</p>
           <h2>Overview</h2>
           <p>
-            This app was built using NodeJs Okay. Just Chill Dhonud. Everything
+            This app was built using NodeJs Okay.Learn and In need of awesom project using next Js Reach here. Everything
             is gonna be fine.
           </p>
           <button className="px-8 py-2 mt-4 mr-8">Demo</button>
@@ -38,13 +38,19 @@ const property = () => {
             <p className="font-semibold text-center py-4">Technologies</p>
             <div className="grid grid-cols-3 md:grid-cols-1">
             <p className="text-gray-600 py-2 flex items-center">
-              <RiRadioButtonFill className="pr-1" /> React
+              <RiRadioButtonFill className="pr-1" /> Django
             </p>
             <p className="text-gray-600 py-2  flex items-center">
-              <RiRadioButtonFill className="pr-1" /> NextJs 
+              <RiRadioButtonFill className="pr-1" /> MySQL 
             </p>
             <p className="text-gray-600 py-2  flex items-center">
-              <RiRadioButtonFill className="pr-1" /> Javascript
+              <RiRadioButtonFill className="pr-1" /> Python
+            </p>
+            <p className="text-gray-600 py-2  flex items-center">
+              <RiRadioButtonFill className="pr-1" /> HTML
+            </p>
+            <p className="text-gray-600 py-2  flex items-center">
+              <RiRadioButtonFill className="pr-1" /> CSS
             </p>
             </div>
           </div>

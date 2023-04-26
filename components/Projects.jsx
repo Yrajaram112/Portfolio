@@ -1,5 +1,6 @@
 import React from "react";
 import propertyImg from "../public/assets/projects/property.jpg";
+import kusomImg from "../public/assets/projects/kusom.jpg";
 import ProjectItem from "./ProjectItem";
 const Projects = () => {
   return (
@@ -11,17 +12,17 @@ const Projects = () => {
         <h2 className="py-4">What I&apos;ve Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
-            title="Property Finder"
+            title="KUSOM Alumni"
+            backgroundImg={kusomImg}
+            projectUrl="/property"
+          />
+          <ProjectItem
+            title="Loan Management System"
             backgroundImg={propertyImg}
             projectUrl="/property"
           />
           <ProjectItem
-            title="Hello Webapp"
-            backgroundImg={propertyImg}
-            projectUrl="/property"
-          />
-          <ProjectItem
-            title="Still Under work"
+            title="Node JS Project"
             backgroundImg={propertyImg}
             projectUrl="/property"
           />
