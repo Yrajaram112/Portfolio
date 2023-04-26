@@ -1,6 +1,6 @@
 import React from "react";
 import propertyImg from "../public/assets/projects/property.jpg";
-import kusomImg from "../public/assets/projects/kusom.jpg";
+import kusomImg from "../public/assets/projects/kusom.png";
 import ProjectItem from "./ProjectItem";
 const Projects = () => {
   return (
