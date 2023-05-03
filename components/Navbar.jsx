@@ -15,9 +15,9 @@ const Navbar = ({resume}) => {
   const [navBg, setNavBg] = useState("#ecf0f3");
   const [linkColor, setLinkColor] = useState("#1f2937");
   const [resumeUrl, setResumeUrl] = useState([])
+
   const router = useRouter();
 
-  
 
   useEffect(() => {
     if (
@@ -45,13 +45,17 @@ const Navbar = ({resume}) => {
         setShadow(false);
       }
     };
-    setResumeUrl(resume)
+    if (resume) {
+      setResumeUrl(resume);
+    }
     window.addEventListener("scroll", handleShadow);
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleShadow);
+    };
+  }, [resume]);
 
-  if (!resume) return null;
 
-  return (
+   return (
     <div
     style={{backgroundColor:`${navBg}`}}
       className={
