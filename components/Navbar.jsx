@@ -6,14 +6,22 @@ import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import navLogo from "../public/assets/rajaLogo.png";
+import { createClient } from '@sanity/client';
 
-const Navbar = () => {
+
+
+const Navbar = ({resume}) => {
+  if (!resume) return null;
+
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#ecf0f3");
   const [linkColor, setLinkColor] = useState("#1f2937");
-
+  const [resumeUrl, setResumeUrl] = useState([])
   const router = useRouter();
+
+ 
+  
 
   useEffect(() => {
     if (
@@ -43,6 +51,7 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", handleShadow);
   }, []);
+
 
   return (
     <div
@@ -78,6 +87,11 @@ const Navbar = () => {
                 Contact
               </li>
             </Link>
+            <a href={resume.url}>
+              <li className="ml-10 text-sm uppercase hover:border-p">
+                Resume
+              </li>
+            </a>
           </ul>
           <div onClick={handleNav} className="md:hidden">
             <AiOutlineMenu size={25} />
