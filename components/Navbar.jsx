@@ -11,7 +11,6 @@ import { createClient } from '@sanity/client';
 
 
 const Navbar = ({resume}) => {
-  if (!resume) return null;
 
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
@@ -52,6 +51,7 @@ const Navbar = ({resume}) => {
     window.addEventListener("scroll", handleShadow);
   }, []);
 
+  if (!resume) return null;
 
   return (
     <div
