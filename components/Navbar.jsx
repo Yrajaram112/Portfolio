@@ -45,14 +45,12 @@ const Navbar = ({resume}) => {
         setShadow(false);
       }
     };
-    if (resume) {
+    if(resume){
       setResumeUrl(resume);
     }
     window.addEventListener("scroll", handleShadow);
-    return () => {
-      window.removeEventListener("scroll", handleShadow);
-    };
-  }, [resume]);
+   
+  }, []);
 
 
    return (

@@ -9,8 +9,9 @@ import { createClient } from "next-sanity";
 
 export async function getServerSideProps(context) {
   const client = createClient({
-    projectId:process.env.PROJECT_ID,
-    dataset:process.env.DATASET,
+    projectId:"wnict2hq",
+    dataset:"production",
+    apiVersion: '2022-09-01',
     useCdn:true
   });
   const query = `*[_type == "resume"]`;
