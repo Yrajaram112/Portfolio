@@ -6,8 +6,6 @@ import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import navLogo from "../public/assets/rajaLogo.png";
-import { createClient } from '@sanity/client';
-
 
 
 const Navbar = ({resume}) => {
@@ -19,7 +17,6 @@ const Navbar = ({resume}) => {
   const [resumeUrl, setResumeUrl] = useState([])
   const router = useRouter();
 
- 
   
 
   useEffect(() => {
@@ -48,6 +45,7 @@ const Navbar = ({resume}) => {
         setShadow(false);
       }
     };
+    setResumeUrl(resume)
     window.addEventListener("scroll", handleShadow);
   }, []);
 
@@ -87,7 +85,7 @@ const Navbar = ({resume}) => {
                 Contact
               </li>
             </Link>
-            <a href={resume.url}>
+            <a href={resumeUrl.url}>
               <li className="ml-10 text-sm uppercase hover:border-p">
                 Resume
               </li>
@@ -156,6 +154,11 @@ const Navbar = ({resume}) => {
                   Contact
                 </li>
               </Link>
+              <a href={resumeUrl.url}>
+              <li className="ml-10 text-sm uppercase hover:border-p">
+                Resume
+              </li>
+            </a>
             </ul>
             <div className="py-40">
               <p className="uppercase tracking-widest text-[#5651e5]">
