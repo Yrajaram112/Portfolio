@@ -13,7 +13,7 @@ const About = () => {
           </p>
           <h2 className="py-4">Who I Am</h2>
           <p className="py-2 text-gray-600">
-            I am an individual who completed a Bachelor's degree in Computer
+            I am an individual who completed a Bachelor&apos;s degree in Computer
             Science and Engineering from Vellore Institute of Technology. My
             passion for programming began during my high school years, and I
             further nurtured it by exploring various domains and undertaking
