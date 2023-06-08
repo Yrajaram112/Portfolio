@@ -2,9 +2,11 @@ import { createClient } from '@sanity/client'
 
 export async function getStaticProps() {
   const client = createClient({
-    projectId:  process.env.PROJECT_ID,
-    dataset:  process.env.DATASET,
-    useCdn: true
+    projectId:  process.env.SANITY_PROJECT_ID,
+    dataset:  process.env.SANITY_DATASET,
+    useCdn: true,
+    apiVersion:"2022-09-01",
+    token: process.env.SANITY_TOKEN
   })
 
   // Fetch the resume document

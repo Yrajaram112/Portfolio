@@ -1,5 +1,8 @@
 import React from "react";
 import propertyImg from "../public/assets/projects/property.jpg";
+import loanManImg from "../public/assets/projects/loanMan.jpg";
+import nepseImg from "../public/assets/projects/nepse.png";
+import studentImg from "../public/assets/projects/studentImg.jpg";
 import kusomImg from "../public/assets/projects/kusom.png";
 import ProjectItem from "./ProjectItem";
 const Projects = () => {
@@ -14,22 +17,26 @@ const Projects = () => {
           <ProjectItem
             title="KUSOM Alumni"
             backgroundImg={kusomImg}
-            projectUrl="/property"
+            projectUrl="/kusom"
+            skill='Django'
+          />
+          <ProjectItem
+            title="Nepse Analytics Project"
+            backgroundImg={nepseImg}
+            projectUrl="/nepse"
+            skill='NextJS'
+          />
+          <ProjectItem
+            title="Student Management System"
+            backgroundImg={studentImg}
+            projectUrl="/student"
+            skill='SpringBoot'
           />
           <ProjectItem
             title="Loan Management System"
-            backgroundImg={propertyImg}
-            projectUrl="/property"
-          />
-          <ProjectItem
-            title="Node JS Project"
-            backgroundImg={propertyImg}
-            projectUrl="/property"
-          />
-          <ProjectItem
-            title="Loan App"
-            backgroundImg={propertyImg}
-            projectUrl="/property"
+            backgroundImg={loanManImg}
+            projectUrl="/loan"
+            skill='Php'
           />
         </div>
       </div>

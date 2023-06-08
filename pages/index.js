@@ -9,10 +9,11 @@ import { createClient } from "next-sanity";
 
 export async function getServerSideProps(context) {
   const client = createClient({
-    projectId:process.env.SANITY_PROJECT_ID,
-    dataset:process.env.SANITY_DATASET,
-    apiVersion: '2022-09-01',
-    useCdn:true
+    projectId:  process.env.SANITY_PROJECT_ID,
+    dataset:  process.env.SANITY_DATASET,
+    useCdn: true,
+    apiVersion:"2022-09-01",
+    token: process.env.SANITY_TOKEN
   });
   const query = `*[_type == "resume"]`;
   const portfolio = await client.fetch(query);
