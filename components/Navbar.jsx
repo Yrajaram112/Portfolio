@@ -167,18 +167,18 @@ const Navbar = ({resume}) => {
                 Let&apos;s Connect
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <FaLinkedinIn />
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <FaGithub />
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <AiOutlineMail />
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <BsFillPersonLinesFill />
-                </div>
+              <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300" onClick={() => window.open('https://www.linkedin.com/in/yrajaram112/')}>
+                    <FaLinkedinIn />
+                  </div>
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300" onClick={() => window.open('https://github.com/Yrajaram112')}>
+                    <FaGithub />
+                  </div>
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300" onClick={() => window.open('mailto:yrajaram112@gmail.com')}>
+                    <AiOutlineMail />
+                  </div>
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300" onClick={() => window.open('https://itsmerajaram.vercel.app/')}>
+                    <BsFillPersonLinesFill />
+                  </div>
               </div>
             </div>
           </div>
