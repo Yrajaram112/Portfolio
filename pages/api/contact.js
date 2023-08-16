@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-export default async (req, res) => {
+const contactHandler = async (req, res) => {
   const { name, email, phone, subject, message } = req.body;
 
   // Create a transporter object
@@ -31,3 +31,5 @@ export default async (req, res) => {
     res.status(500).json({ message: 'Error sending email' });
   }
 };
+
+export default contactHandler;
