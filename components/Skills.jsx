@@ -8,11 +8,15 @@ import sqlImg from "../public/assets/skills/sql.png";
 import githubImg from "../public/assets/skills/github.png";
 import nextImg from "../public/assets/skills/nextjs.png";
 import javascriptImg from "../public/assets/skills/html.png";
+import nginxImg from "../public/assets/skills/nginx.jpg";
+import dockerImg from "../public/assets/skills/docker.png";
+import reactImg from "../public/assets/skills/react.png";
+import deploymentImg from "../public/assets/skills/deployment.png";
 
 
 const Skills = () => {
   return (
-    <div id='skills' className="w-full lg:h-screen p-2">
+    <div id='skills' className="w-full p-8">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Skills
@@ -145,6 +149,66 @@ const Skills = () => {
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h3>SQL</h3>
+              </div>
+            </div> 
+          </div>
+          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="m-auto">
+                <Image
+                   src={reactImg}
+                  width="64"
+                  height="64"
+                  alt="/"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>React</h3>
+              </div>
+            </div> 
+          </div>
+          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="m-auto">
+                <Image
+                   src={nginxImg}
+                  width="64"
+                  height="64"
+                  alt="/"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>Nginx</h3>
+              </div>
+            </div> 
+          </div>
+          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="m-auto">
+                <Image
+                   src={deploymentImg}
+                  width="64"
+                  height="64"
+                  alt="/"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>Deployment</h3>
+              </div>
+            </div> 
+          </div>
+          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="m-auto">
+                <Image
+                   src={dockerImg}
+                  width="64"
+                  height="64"
+                  alt="/"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>Docker</h3>
               </div>
             </div> 
           </div>

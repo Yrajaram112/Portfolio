@@ -62,7 +62,7 @@ const Navbar = ({resume}) => {
           : "fixed w-full h-20 z-[100]"
       }
     >
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-4">
         <Link href="/">
           <Image src={navLogo} width="185" height="20" alt="/" />
         </Link>
@@ -87,11 +87,11 @@ const Navbar = ({resume}) => {
                 Contact
               </li>
             </Link>
-            <a href={resumeUrl.url}>
+            <Link href={resumeUrl?.url || ""} target="blank">
               <li className="ml-10 text-sm uppercase hover:border-p">
                 Resume
               </li>
-            </a>
+            </Link>
           </ul>
           <div onClick={handleNav} className="md:hidden">
             <AiOutlineMenu size={25} />
@@ -156,11 +156,11 @@ const Navbar = ({resume}) => {
                   Contact
                 </li>
               </Link>
-              <a href={resumeUrl.url}>
+              <Link href={resumeUrl?.url || ""} target="blank">
               <li className="ml-10 text-sm uppercase hover:border-p">
                 Resume
               </li>
-            </a>
+            </Link>
             </ul>
             <div className="py-40">
               <p className="uppercase tracking-widest text-[#5651e5]">
