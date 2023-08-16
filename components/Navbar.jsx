@@ -157,7 +157,7 @@ const Navbar = ({resume}) => {
                 </li>
               </Link>
               <Link href={resumeUrl?.url || ""} target="blank">
-              <li className="ml-10 text-sm uppercase hover:border-p">
+              <li className="py-4 text-sm uppercase hover:border-p">
                 Resume
               </li>
             </Link>
