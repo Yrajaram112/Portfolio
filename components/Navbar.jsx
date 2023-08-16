@@ -50,7 +50,7 @@ const Navbar = ({resume}) => {
     }
     window.addEventListener("scroll", handleShadow);
    
-  }, []);
+  }, [resume]);
 
 
    return (
