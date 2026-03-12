@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import nepseImg from "../public/assets/projects/nepse.png";
+import nepseImg from "../public/assets/projects/nepse-rajaram-yadav-project.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
 
@@ -14,7 +14,7 @@ const nepse = () => {
           fill
           style={{ objectFit: "cover" }}
           src={nepseImg}
-          alt="/"
+          alt="NEPSE project by Rajaram Yadav"
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-1">
           <h2>Nepse Analytics Project</h2>

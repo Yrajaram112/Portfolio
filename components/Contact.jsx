@@ -5,7 +5,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineChevronUp } from "react-icons/hi";
-import contactImg from "../public/assets/contact.jpg";
+import contactImg from "../public/assets/contact-rajaram-yadav.jpg";
 import EmailSendModal from "./EmailSendModal";
 
 const Contact = () => {
@@ -81,7 +81,7 @@ const Contact = () => {
                   src={contactImg}
                   width={1000}
                   height={1000}
-                  alt="/"
+                  alt="Contact Rajaram Yadav"
                 />
               </div>
               <div>

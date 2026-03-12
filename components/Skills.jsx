@@ -1,17 +1,17 @@
 import Image from "next/image";
 import React from "react";
-import htmlImg from "../public/assets/skills/html.png";
-import cssImg from "../public/assets/skills/css.png";
-import pythonImg from "../public/assets/skills/python.png";
-import djangoImg from "../public/assets/skills/django.png";
-import sqlImg from "../public/assets/skills/sql.png";
-import githubImg from "../public/assets/skills/github.png";
-import nextImg from "../public/assets/skills/nextjs.png";
-import javascriptImg from "../public/assets/skills/html.png";
-import nginxImg from "../public/assets/skills/nginx.jpg";
-import dockerImg from "../public/assets/skills/docker.png";
-import reactImg from "../public/assets/skills/react.png";
-import deploymentImg from "../public/assets/skills/deployment.png";
+import htmlImg from "../public/assets/skills/html-rajaram-yadav.png";
+import cssImg from "../public/assets/skills/css-rajaram-yadav.png";
+import pythonImg from "../public/assets/skills/python-rajaram-yadav.png";
+import djangoImg from "../public/assets/skills/django-rajaram-yadav.png";
+import sqlImg from "../public/assets/skills/sql-rajaram-yadav.png";
+import githubImg from "../public/assets/skills/github-rajaram-yadav.png";
+import nextImg from "../public/assets/skills/nextjs-rajaram-yadav.png";
+import javascriptImg from "../public/assets/skills/html-rajaram-yadav.png";
+import nginxImg from "../public/assets/skills/nginx-rajaram-yadav.jpg";
+import dockerImg from "../public/assets/skills/docker-rajaram-yadav.png";
+import reactImg from "../public/assets/skills/react-rajaram-yadav.png";
+import deploymentImg from "../public/assets/skills/deployment-rajaram-yadav.png";
 
 
 const Skills = () => {
@@ -32,7 +32,7 @@ const Skills = () => {
                   src={htmlImg}
                   width="64"
                   height="64"
-                  alt="/"
+                  alt="HTML skill icon for Rajaram Yadav's portfolio"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -48,7 +48,7 @@ const Skills = () => {
                    src={cssImg}
                   width="64"
                   height="64"
-                  alt="/"
+                  alt="CSS skill icon for Rajaram Yadav's portfolio"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -64,7 +64,7 @@ const Skills = () => {
                   src={javascriptImg}
                   width="64"
                   height="64"
-                  alt="/"
+                  alt="JavaScript skill icon for Rajaram Yadav's portfolio"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -80,7 +80,7 @@ const Skills = () => {
                    src={nextImg}
                   width="64"
                   height="64"
-                  alt="/"
+                  alt="Next.js skill icon for Rajaram Yadav's portfolio"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -96,7 +96,7 @@ const Skills = () => {
                   src={djangoImg}
                   width="64"
                   height="64"
-                  alt="/"
+                  alt="Django skill icon for Rajaram Yadav's portfolio"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -112,7 +112,7 @@ const Skills = () => {
                    src={pythonImg}
                   width="64"
                   height="64"
-                  alt="/"
+                  alt="Python skill icon for Rajaram Yadav's portfolio"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -128,7 +128,7 @@ const Skills = () => {
                    src={githubImg}
                   width="64"
                   height="64"
-                  alt="/"
+                  alt="Github skill icon for Rajaram Yadav's portfolio"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -144,7 +144,7 @@ const Skills = () => {
                    src={sqlImg}
                   width="64"
                   height="64"
-                  alt="/"
+                  alt="SQL skill icon for Rajaram Yadav's portfolio"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -159,7 +159,7 @@ const Skills = () => {
                    src={reactImg}
                   width="64"
                   height="64"
-                  alt="/"
+                  alt="React skill icon for Rajaram Yadav's portfolio"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -174,7 +174,7 @@ const Skills = () => {
                    src={nginxImg}
                   width="64"
                   height="64"
-                  alt="/"
+                  alt="Nginx skill icon for Rajaram Yadav's portfolio"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -189,7 +189,7 @@ const Skills = () => {
                    src={deploymentImg}
                   width="64"
                   height="64"
-                  alt="/"
+                  alt="Deployment skill icon for Rajaram Yadav's portfolio"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -204,7 +204,7 @@ const Skills = () => {
                    src={dockerImg}
                   width="64"
                   height="64"
-                  alt="/"
+                  alt="Docker skill icon for Rajaram Yadav's portfolio"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">

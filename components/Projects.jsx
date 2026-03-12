@@ -1,9 +1,9 @@
 import React from "react";
-import propertyImg from "../public/assets/projects/property.jpg";
-import loanManImg from "../public/assets/projects/loanMan.jpg";
-import nepseImg from "../public/assets/projects/nepse.png";
-import studentImg from "../public/assets/projects/studentImg.jpg";
-import kusomImg from "../public/assets/projects/kusom.png";
+import propertyImg from "../public/assets/projects/property-rajaram-yadav-project.jpg";
+import loanManImg from "../public/assets/projects/loanMan-rajaram-yadav-project.jpg";
+import nepseImg from "../public/assets/projects/nepse-rajaram-yadav-project.png";
+import studentImg from "../public/assets/projects/studentImg-rajaram-yadav-project.jpg";
+import kusomImg from "../public/assets/projects/kusom-rajaram-yadav-project.png";
 import ProjectItem from "./ProjectItem";
 const Projects = () => {
   return (

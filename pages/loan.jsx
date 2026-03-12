@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import kusomImg from "../public/assets/projects/kusom.png";
+import kusomImg from "../public/assets/projects/kusom-rajaram-yadav-project.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
 
@@ -14,7 +14,7 @@ const loan = () => {
           fill
           style={{ objectFit: "cover" }}
           src={kusomImg}
-          alt="/"
+          alt="Loan Management System project by Rajaram Yadav"
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-1">
           <h2>Loan Management System</h2>
