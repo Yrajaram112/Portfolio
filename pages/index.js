@@ -53,7 +53,7 @@ export default function Home({ portfolio, resumeUrl }) {
         {/* Open Graph for LinkedIn / Facebook */}
         <meta property="og:title" content="Rajaram Yadav | Software Engineer" />
         <meta property="og:description" content="Portfolio of Rajaram Yadav - Software Engineer specializing in Java, Cloud, and DevOps." />
-        <meta property="og:image" content="https://www.rajaramyadav.com.np/images/rajaram-yadav.jpg" />
+        <meta property="og:image" content="https://www.rajaramyadav.com.np/assets/rajaram-yadav-software-engineer.png" />
         <meta property="og:url" content="https://www.rajaramyadav.com.np" />
         <meta property="og:type" content="website" />
 
@@ -61,7 +61,8 @@ export default function Home({ portfolio, resumeUrl }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Rajaram Yadav | Software Engineer" />
         <meta name="twitter:description" content="Portfolio of Rajaram Yadav - Java, Cloud, and DevOps Engineer." />
-        <meta name="twitter:image" content="https://www.rajaramyadav.com.np/images/rajaram-yadav.jpg" />
+        <meta name="twitter:image" content="https://www.rajaramyadav.com.np/assets/rajaram-yadav-software-engineer.png" />
+        <meta name="google-site-verification" content="Dg569p1GB8QfVH5JMRhGwko5EZ7FbJt4Ap1JQ3ukMfg" />
       </Head>
 
       <script
