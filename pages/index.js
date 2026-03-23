@@ -63,6 +63,7 @@ export default function Home({ portfolio, resumeUrl }) {
         <meta name="twitter:description" content="Portfolio of Rajaram Yadav - Java, Cloud, and DevOps Engineer." />
         <meta name="twitter:image" content="https://www.rajaramyadav.com.np/images/rajaram-yadav.jpg" />
       </Head>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -70,12 +71,14 @@ export default function Home({ portfolio, resumeUrl }) {
             "@context": "https://schema.org",
             "@type": "Person",
             name: "Rajaram Yadav",
+            jobTitle: "Senior Software Engineer",
             url: "https://www.rajaramyadav.com.np",
-            image: "https://www.rajaramyadav.com.np/images/rajaram-yadav.jpg",
-            jobTitle: "Software Engineer",
+            image: "https://www.rajaramyadav.com.np/assets/rajaram-yadav-software-engineer.png",
             sameAs: [
               "https://www.linkedin.com/in/yadavrajaram",
               "https://github.com/yrajaram112",
+              "https://dev.to/rajaramyadav",
+              "https://medium.com/@rajaramyadav",
               "https://instagram.com/yrajaram112"
             ]
           })
