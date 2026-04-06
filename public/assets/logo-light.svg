@@ -1,0 +1,14 @@
+<svg width="220" height="44" viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- R mark -->
+  <rect width="44" height="44" rx="10" fill="#0D1117"/>
+  <path d="M11 34 L11 10 L22 10 Q30 10 30 17.5 Q30 22 26 23.5L32 34"
+        stroke="#00D9F5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M11 22 L25 22"
+        stroke="#00D9F5" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Wordmark -->
+  <text x="54" y="19" font-family="Georgia, 'Times New Roman', serif"
+        font-size="16" font-weight="600" fill="#0D1117" letter-spacing="-0.3">Rajaram Yadav</text>
+  <text x="55" y="33" font-family="'Courier New', monospace"
+        font-size="9.5" font-weight="400" fill="#008FA3" letter-spacing="2.2">SENIOR SOFTWARE ENGINEER</text>
+</svg>

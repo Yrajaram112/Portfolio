@@ -1,0 +1,16 @@
+.projGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .projGrid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .projGrid > div {
+    grid-column: span 1 !important;
+  }
+}

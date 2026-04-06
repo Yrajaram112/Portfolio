@@ -1,0 +1,35 @@
+<svg width="200" height="48" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Square / App icon (dark) -->
+  <rect x="0" y="0" width="48" height="48" rx="11" fill="#0D1117"/>
+  <path d="M11 37 L11 11 L23 11 Q32 11 32 19 Q32 23.5 27.5 25L34 37"
+        stroke="#00D9F5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M11 23.5 L26.5 23.5"
+        stroke="#00D9F5" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Circle (dark) -->
+  <circle cx="76" cy="24" r="24" fill="#0D1117"/>
+  <path d="M63 37 L63 11 L75 11 Q84 11 84 19 Q84 23.5 79.5 25L86 37"
+        stroke="#00D9F5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M63 23.5 L78.5 23.5"
+        stroke="#00D9F5" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Gradient square -->
+  <defs>
+    <linearGradient id="brandGrad" x1="104" y1="0" x2="152" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00D9F5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect x="104" y="0" width="48" height="48" rx="11" fill="url(#brandGrad)"/>
+  <path d="M115 37 L115 11 L127 11 Q136 11 136 19 Q136 23.5 131.5 25L138 37"
+        stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M115 23.5 L130.5 23.5"
+        stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Monogram circle -->
+  <circle cx="176" cy="24" r="23" fill="#0D1117" stroke="#00D9F5" stroke-width="1.5"/>
+  <text x="176" y="29" text-anchor="middle"
+        font-family="Georgia, serif" font-size="15" font-weight="600" fill="#00D9F5">RY</text>
+
+</svg>
