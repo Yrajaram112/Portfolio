@@ -3,6 +3,12 @@
 Minimal, confident, production-grade portfolio for a Senior Software Engineer.
 Built with **Next.js 14 (App Router)**, **Tailwind CSS**, and zero external animation libraries — pure CSS animations only for maximum performance.
 
+🚀 **Major Update (2026)**
+- Migrated architecture from Pages Router → App Router (modern Next.js standard)
+- Redesigned UI from scratch for a cleaner, more professional developer portfolio
+- Enhanced SEO with structured data, metadata optimization, and improved LCP
+
+> Previous version (Pages Router) is available in the `pages-router-version` branch.
 ---
 
 ## ⚡ Quick Start
