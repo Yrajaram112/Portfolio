@@ -79,7 +79,7 @@ const WEBPAGE_SCHEMA = {
   description: DESC,
   isPartOf: { '@id': `${SITE_URL}/#website` },
   about: { '@id': `${SITE_URL}/#person` },
-  dateModified: new Date().toISOString().split('T')[0],
+  dateModified: new Date().toISOString(),
   inLanguage: 'en-US',
   breadcrumb: {
     '@type': 'BreadcrumbList',

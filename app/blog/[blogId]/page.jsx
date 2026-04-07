@@ -60,6 +60,7 @@ export default async function BlogPostPage({ params }) {
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
     url: `${SITE_URL}/blog/${post.slug}`,
+    mainEntity: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${post.slug}` },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${post.slug}` },
     proficiencyLevel: 'Expert',
     inLanguage: 'en-US',
