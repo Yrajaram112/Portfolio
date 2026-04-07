@@ -79,6 +79,7 @@ const WEBPAGE_SCHEMA = {
   description: DESC,
   isPartOf: { '@id': `${SITE_URL}/#website` },
   about: { '@id': `${SITE_URL}/#person` },
+  mainEntity:{"@id":"https://www.rajaramyadav.com.np/#person"},
   dateModified: new Date().toISOString(),
   inLanguage: 'en-US',
   breadcrumb: {
