@@ -15,7 +15,7 @@ const SKILLS = [
 ];
 
 const INFO_CARDS = [
-  { label: 'Experience', value: '7+ Years'               },
+  { label: 'Experience', value: '6+ Years'               },
   { label: 'Location',   value: 'United States'          },
   { label: 'Email',      value: 'rajaramyadavcse@gmail.com' },
   { label: 'Status',     value: 'Available ✓', green: true },
@@ -52,7 +52,7 @@ export default function ResumeClient() {
                     Rajaram Yadav
                   </h1>
                   <p style={{ fontFamily: 'JetBrains Mono,monospace', fontSize: 11, color: 'var(--accent)', margin: '4px 0 0', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-                    Senior Software Engineer · 7+ Years
+                    Senior Software Engineer · 6+ Years
                   </p>
                   <p style={{ fontFamily: 'DM Sans,sans-serif', fontSize: 12, color: 'var(--text-3)', margin: '4px 0 0' }}>
                     Java · Spring Boot · React · AWS · Kubernetes · System Design

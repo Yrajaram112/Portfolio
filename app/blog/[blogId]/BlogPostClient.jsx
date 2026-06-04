@@ -93,7 +93,7 @@ export default function BlogPostClient({ post }) {
               <div style={{ flex: 1 }}>
                 <div style={{ fontFamily: 'Sora,sans-serif', fontWeight: 700, fontSize: 15, color: 'var(--text-1)', marginBottom: 3 }}>Rajaram Yadav</div>
                 <div style={{ fontFamily: 'DM Sans,sans-serif', fontSize: 13, color: 'var(--text-3)', lineHeight: 1.6 }}>
-                  Senior Software Engineer · Java · Spring Boot · React · AWS · 7+ years building scalable systems.
+                  Senior Software Engineer · Java · Spring Boot · React · AWS · 6+ years building scalable systems.
                 </div>
               </div>
               <Link href="/#contact" className="btn btn-ghost" style={{ fontSize: 12, whiteSpace: 'nowrap' }}>

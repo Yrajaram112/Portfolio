@@ -19,7 +19,7 @@
 }
 
 .cursor::after {
-  content: "|";        
+  content: "|";
   color: var(--accent);
   animation: blink 1s step-end infinite;
   margin-left: 1px;
@@ -36,12 +36,28 @@
   pointer-events: none;
 }
 
-
+/* ── Mobile: stack vertically, SHOW the photo ── */
 @media (max-width: 900px) {
-  .hero-grid {
+  .heroGrid {
     grid-template-columns: 1fr !important;
+    gap: 40px !important;
   }
-  .hero-photo {
+
+  /* Photo: visible on mobile, centered, smaller */
+  .heroPhoto {
+    display: flex !important;
+    justify-content: center !important;
+    order: -1; /* show photo ABOVE text on mobile for impact */
+  }
+
+  .heroPhoto > div[style*="position: relative"] {
+    max-width: 220px !important;
+    width: 220px !important;
+  }
+
+  /* Hide floating badges on mobile (they overflow) */
+  .heroPhoto > div[style*="position: absolute"][style*="top: 32px"],
+  .heroPhoto > div[style*="position: absolute"][style*="bottom: 60px"] {
     display: none !important;
   }
 }

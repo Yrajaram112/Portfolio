@@ -30,7 +30,7 @@ const THEME_SCRIPT = `(function(){
 // ─── Shared site constants ────────────────────────────────────────────────────
 const SITE_URL  = 'https://www.rajaramyadav.com.np';
 const FULL_NAME = 'Rajaram Yadav';
-const DESC      = 'Rajaram Yadav is a Senior Software Engineer with 7+ years building scalable enterprise systems using Java, Spring Boot, React, Next.js, AWS, and Kubernetes. Based in United States. Available for senior engineering roles and consulting.';
+const DESC      = 'Rajaram Yadav is a Senior Software Engineer with 6+ years building scalable enterprise systems using Java, Spring Boot, React, Next.js, AWS, and Kubernetes. Based in United States. Available for senior engineering roles and consulting.';
 const OG_IMAGE  = `${SITE_URL}/assets/rajaram-yadav-software-engineer.png`;
 
 // ─── Root metadata (shared across all pages) ─────────────────────────────────

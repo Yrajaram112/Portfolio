@@ -81,14 +81,14 @@ export default function About({ theme }) {
               <div><span className="p">$ </span><span className="c">whoami</span></div>
               <div className="o">rajaram-yadav</div>
               <div style={{marginTop:6}}><span className="p">$ </span><span className="c">cat stack.txt</span></div>
-              <div className="o">7+ yrs · Java · Spring Boot · React · AWS</div>
+              <div className="o">6+ yrs · Java · Spring Boot · React · AWS</div>
               <div className="o">Enterprise · Fintech · EdTech · SaaS</div>
               <div style={{marginTop:6}}><span className="p">$ </span><span className="c">echo $STATUS</span></div>
               <div style={{ color:'var(--success)', fontFamily:'JetBrains Mono,monospace', fontSize:'0.82rem' }}>Available for senior roles & consulting ✓</div>
             </div>
 
             {[
-              "I'm Rajaram Yadav — a Senior Software Engineer with 7+ years designing and shipping production-grade systems across fintech, ed-tech, and enterprise domains.",
+              "I'm Rajaram Yadav — a Senior Software Engineer with 6+ years designing and shipping production-grade systems across fintech, ed-tech, and enterprise domains.",
               "I specialize in Java and Spring Boot microservices, event-driven architectures (Kafka, RabbitMQ), and modern full-stack apps with React and Next.js. I've led cloud migrations on AWS, designed distributed systems at scale, and mentored engineering teams.",
               "Beyond code, I run DreamBig — an education platform — and share engineering content on YouTube at @coderestart.",
             ].map((p,i)=>(
@@ -97,7 +97,7 @@ export default function About({ theme }) {
 
             {/* Stats */}
             <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12, borderTop:'1px solid var(--border)', borderBottom:'1px solid var(--border)', padding:'20px 0', margin:'20px 0' }}>
-              {[['7+','Years'],['30+','Projects'],['3','Continents']].map(([n,l])=>(
+              {[['6+','Years'],['30+','Projects'],['3','Continents']].map(([n,l])=>(
                 <div key={l} style={{ textAlign:'center' }}>
                   <div style={{ fontFamily:'Sora,sans-serif', fontWeight:700, fontSize:'1.8rem', color:'var(--accent)', letterSpacing:'-0.03em' }}>{n}</div>
                   <div style={{ fontFamily:'JetBrains Mono,monospace', fontSize:10, color:'var(--text-3)', marginTop:4, letterSpacing:'0.08em', textTransform:'uppercase' }}>{l}</div>
