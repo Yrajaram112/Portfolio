@@ -58,7 +58,7 @@ export default function Navbar({ theme, toggleTheme, mounted }) {
             </div>
             <div>
               <div style={{ fontFamily:'Sora,sans-serif', fontWeight:700, fontSize:14, color:'var(--text-1)', letterSpacing:'-0.01em' }}>Rajaram Yadav</div>
-              <div style={{ fontFamily:'JetBrains Mono,monospace', fontSize:9, color:'var(--accent)', letterSpacing:'0.15em', textTransform:'uppercase' }}>Senior Software Engineer</div>
+              <div style={{ fontFamily:'JetBrains Mono,monospace', fontSize:9, color:'var(--accent)', letterSpacing:'0.15em', textTransform:'uppercase' }}>Data · AI · Software · ML</div>
             </div>
           </Link>
 

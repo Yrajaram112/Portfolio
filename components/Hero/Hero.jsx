@@ -7,11 +7,11 @@ import { FiMail, FiFileText, FiArrowDown } from 'react-icons/fi';
 import { SiLeetcode } from 'react-icons/si';
 
 const ROLES = [
-  'AI & Backend Engineer',
-  'Spring Boot · Java Architect',
-  'Python · FastAPI · LLM Builder',
-  'DevOps · Nginx · Linux VM',
-  'Full-Stack · Next.js · Angular',
+  'Data Engineer · Spark · dbt',
+  'AI Engineer · LLM · RAG',
+  'Software Engineer · Full Stack',
+  'ML Engineer · MLOps · SageMaker',
+  'Cloud · AWS · Azure · GCP',
 ];
 
 function Typewriter() {
@@ -91,7 +91,7 @@ const SOCIALS = [
   { icon: <FaGithub size={15} />, href: 'https://github.com/Yrajaram112', label: 'GitHub' },
   { icon: <FaYoutube size={15} />, href: 'https://www.youtube.com/@coderestart', label: 'YouTube' },
   { icon: <SiLeetcode size={14} />, href: 'https://leetcode.com/rajaramyadav', label: 'LeetCode' },
-  { icon: <FiMail size={15} />, href: 'mailto:rajaramyadavcse@gmail.com', label: 'Email' },
+  { icon: <FiMail size={15} />, href: 'mailto:rajaramyadav.eng@gmail.com', label: 'Email' },
 ];
 
 export default function Hero({ theme, mounted }) {
@@ -114,7 +114,7 @@ export default function Hero({ theme, mounted }) {
           <div>
             <div className="fu d1" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 14px', borderRadius: 100, border: '1px solid rgba(63,185,80,0.3)', background: 'rgba(63,185,80,0.07)', marginBottom: 24 }}>
               <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#3FB950', boxShadow: '0 0 8px #3FB950', flexShrink: 0, animation: mounted ? 'blink 2s infinite' : 'none' }} />
-              <span style={{ fontFamily: 'JetBrains Mono,monospace', fontSize: 11, color: '#3FB950', letterSpacing: '0.12em' }}>AVAILABLE FOR OPPORTUNITIES</span>
+              <span style={{ fontFamily: 'JetBrains Mono,monospace', fontSize: 11, color: '#3FB950', letterSpacing: '0.12em' }}>OPEN · FULL-TIME · CONSULTING · FREELANCE</span>
             </div>
 
             <h1 className="fu d2" style={{ marginBottom: 14, color: 'var(--text-1)' }}>
@@ -125,15 +125,15 @@ export default function Hero({ theme, mounted }) {
             <div className="fu d3" style={{ fontSize: 'clamp(0.82rem,1.4vw,0.96rem)', marginBottom: 20, minHeight: '1.6em' }} suppressHydrationWarning>
               {mounted ? <Typewriter /> : (
                 <span style={{ color: 'var(--accent)', fontFamily: 'JetBrains Mono,monospace' }}>
-                  <span style={{ color: 'var(--text-3)' }}>$ </span>AI &amp; Backend Engineer
+                  <span style={{ color: 'var(--text-3)' }}>$ </span>Data Engineer
                 </span>
               )}
             </div>
 
             <p className="fu d4" style={{ fontSize: 'clamp(0.95rem,1.5vw,1.08rem)', color: 'var(--text-2)', lineHeight: 1.78, maxWidth: 480, marginBottom: 36 }}>
-              Spring Boot · Java · Python · AI/LLM · React · Next.js · Angular —{' '}
-              <strong style={{ color: 'var(--text-1)', fontWeight: 500 }}>6+ years</strong> shipping
-              production-grade systems across fintech, AI, and enterprise.
+              Data · AI · Software · ML —{' '}
+              <strong style={{ color: 'var(--text-1)', fontWeight: 500 }}>fast to learn, confident to ship.</strong>{' '}
+              I build production systems across cloud platforms, data pipelines, intelligent applications, and distributed architectures.
             </p>
 
             <div className="fu d5" style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 36 }}>
@@ -152,7 +152,7 @@ export default function Hero({ theme, mounted }) {
             </div>
 
             <div className="fu d7" style={{ display: 'flex', gap: 28, marginTop: 40, paddingTop: 28, borderTop: '1px solid var(--border-subtle)' }}>
-              {[['6+', 'Years'], ['30+', 'Projects'], ['3', 'Continents']].map(([v, l]) => (
+              {[['30+', 'Projects'], ['4', 'Domains'], ['3', 'Continents']].map(([v, l]) => (
                 <div key={l}>
                   <div style={{ fontFamily: 'Sora,sans-serif', fontWeight: 700, fontSize: '1.6rem', color: 'var(--accent)', letterSpacing: '-0.03em', lineHeight: 1 }}>{v}</div>
                   <div style={{ fontFamily: 'JetBrains Mono,monospace', fontSize: 10, color: 'var(--text-3)', marginTop: 4, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{l}</div>
@@ -177,8 +177,8 @@ export default function Hero({ theme, mounted }) {
 
             <div style={{ position: 'relative', width: '100%', maxWidth: 340, aspectRatio: '340/420', borderRadius: 20, overflow: 'hidden', border: '1px solid var(--border)', boxShadow: 'var(--shadow-lg), var(--shadow-glow)' }}>
               <Image
-                src="/assets/rajaram-yadav-software-engineer.png"
-                alt="Rajaram Yadav — AI & Backend Engineer"
+                src="/assets/rajaram-yadav-engineer.png"
+                alt="Rajaram Yadav — Data Engineer · AI Engineer · Software Engineer · ML Engineer"
                 fill
                 className="object-cover object-center"
                 priority
@@ -188,7 +188,7 @@ export default function Hero({ theme, mounted }) {
               <div style={{ position: 'absolute', bottom: 16, left: 16, right: 16, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div>
                   <div style={{ fontFamily: 'Sora,sans-serif', fontWeight: 700, fontSize: 14, color: '#fff' }}>Rajaram Yadav</div>
-                  <div style={{ fontFamily: 'JetBrains Mono,monospace', fontSize: 9, color: 'var(--accent)', letterSpacing: '0.12em', marginTop: 2 }}>AI · BACKEND · FULL-STACK</div>
+                  <div style={{ fontFamily: 'JetBrains Mono,monospace', fontSize: 9, color: 'var(--accent)', letterSpacing: '0.12em', marginTop: 2 }}>DATA · AI · SOFTWARE · ML</div>
                 </div>
                 <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#3FB950', boxShadow: '0 0 8px #3FB950' }} />
               </div>
@@ -197,10 +197,10 @@ export default function Hero({ theme, mounted }) {
             {mounted && (
               <>
                 <div style={{ position: 'absolute', top: 32, right: -18, padding: '8px 14px', borderRadius: 9, background: 'var(--surface)', border: '1px solid var(--border)', boxShadow: 'var(--shadow-md)', animation: 'float 4s ease-in-out infinite', animationDelay: '0.5s', zIndex: 5 }}>
-                  <div style={{ fontFamily: 'JetBrains Mono,monospace', fontSize: 10, color: 'var(--accent)' }}>☁ AWS · Nginx · Docker</div>
+                  <div style={{ fontFamily: 'JetBrains Mono,monospace', fontSize: 10, color: 'var(--accent)' }}>☁ Spark · Snowflake · AWS</div>
                 </div>
                 <div style={{ position: 'absolute', bottom: 60, left: -22, padding: '8px 14px', borderRadius: 9, background: 'var(--surface)', border: '1px solid var(--border)', boxShadow: 'var(--shadow-md)', animation: 'float 4s ease-in-out infinite', animationDelay: '1.3s', zIndex: 5 }}>
-                  <div style={{ fontFamily: 'JetBrains Mono,monospace', fontSize: 10, color: 'var(--accent-2)' }}>🧠 LLM · FastAPI · Celery</div>
+                  <div style={{ fontFamily: 'JetBrains Mono,monospace', fontSize: 10, color: 'var(--accent-2)' }}>🧠 LLM · LangChain · RAG</div>
                 </div>
               </>
             )}

@@ -7,7 +7,7 @@ const TYPES = ['Full-Stack Web Application','Backend / API Development','Cloud A
 const INIT  = { name:'', email:'', projectType:'', message:'' };
 
 const SOCIALS = [
-  { icon:<FiMail size={15}/>,       label:'Email',    val:'rajaramyadavcse@gmail.com',      href:'mailto:rajaramyadavcse@gmail.com' },
+  { icon:<FiMail size={15}/>,       label:'Email',    val:'rajaramyadav.eng@gmail.com',      href:'mailto:rajaramyadav.eng@gmail.com' },
   { icon:<FaLinkedinIn size={14}/>, label:'LinkedIn', val:'linkedin.com/in/yadavrajaram',   href:'https://www.linkedin.com/in/yadavrajaram' },
   { icon:<FaGithub size={15}/>,     label:'GitHub',   val:'github.com/Yrajaram112',         href:'https://github.com/Yrajaram112' },
   { icon:<FaYoutube size={15}/>,    label:'YouTube',  val:'youtube.com/@coderestart',       href:'https://www.youtube.com/@coderestart' },

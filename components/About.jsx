@@ -44,7 +44,7 @@ export default function About({ theme }) {
             <div style={{ position:'relative', marginBottom:28 }}>
               <div style={{ position:'absolute', top:-10, left:-10, right:10, bottom:10, borderRadius:18, border:'1px solid var(--border)', pointerEvents:'none' }}/>
               <div style={{ borderRadius:16, overflow:'hidden', position:'relative', border:'1px solid var(--border)', boxShadow:'var(--shadow-lg)', aspectRatio:'4/3' }}>
-                <Image src="/assets/contact-rajaram-yadav.jpg" alt="Rajaram Yadav Senior Software Engineer" fill className="object-cover object-top" sizes="(max-width:900px) 100vw, 50vw"/>
+                <Image src="/assets/contact-rajaram-yadav.jpg" alt="Rajaram Yadav — Data Engineer · AI Engineer · Software Engineer · ML Engineer" fill className="object-cover object-top" sizes="(max-width:900px) 100vw, 50vw"/>
                 <div style={{ position:'absolute', inset:0, background:'linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 50%)' }}/>
               </div>
               {/* Dot grid deco */}
@@ -81,23 +81,22 @@ export default function About({ theme }) {
               <div><span className="p">$ </span><span className="c">whoami</span></div>
               <div className="o">rajaram-yadav</div>
               <div style={{marginTop:6}}><span className="p">$ </span><span className="c">cat stack.txt</span></div>
-              <div className="o">6+ yrs · Java · Spring Boot · React · AWS</div>
-              <div className="o">Enterprise · Fintech · EdTech · SaaS</div>
+              <div className="o">Data · AI · Software · ML · AWS · Azure · GCP</div>
+              <div className="o">Spark · dbt · LangChain · Spring Boot · React</div>
               <div style={{marginTop:6}}><span className="p">$ </span><span className="c">echo $STATUS</span></div>
-              <div style={{ color:'var(--success)', fontFamily:'JetBrains Mono,monospace', fontSize:'0.82rem' }}>Available for senior roles & consulting ✓</div>
+              <div style={{ color:'var(--success)', fontFamily:'JetBrains Mono,monospace', fontSize:'0.82rem' }}>Open · full-time · consulting · freelance ✓</div>
             </div>
 
             {[
-              "I'm Rajaram Yadav — a Senior Software Engineer with 6+ years designing and shipping production-grade systems across fintech, ed-tech, and enterprise domains.",
-              "I specialize in Java and Spring Boot microservices, event-driven architectures (Kafka, RabbitMQ), and modern full-stack apps with React and Next.js. I've led cloud migrations on AWS, designed distributed systems at scale, and mentored engineering teams.",
-              "Beyond code, I run DreamBig — an education platform — and share engineering content on YouTube at @coderestart.",
+              "I'm Rajaram Yadav — a Data, AI, Software, and ML Engineer who builds systems that scale, perform, and hold up in production. I move fast on new stacks, ramp quickly on unfamiliar domains, and ship with confidence from day one.",
+              "From lakehouse pipelines and real-time data platforms to RAG architectures, microservices, and full-stack applications — I design end-to-end solutions across AWS, Azure, Snowflake, Databricks, Spark, Kafka, LangChain, Java, Spring Boot, and modern frontends. Give me a hard problem and a tight timeline — I'll deliver.",
             ].map((p,i)=>(
               <p key={i} style={{ fontSize:'0.97rem', color:'var(--text-2)', lineHeight:1.82, marginBottom:14 }}>{p}</p>
             ))}
 
             {/* Stats */}
             <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12, borderTop:'1px solid var(--border)', borderBottom:'1px solid var(--border)', padding:'20px 0', margin:'20px 0' }}>
-              {[['6+','Years'],['30+','Projects'],['3','Continents']].map(([n,l])=>(
+              {[['30+','Projects'],['4','Domains'],['3','Continents']].map(([n,l])=>(
                 <div key={l} style={{ textAlign:'center' }}>
                   <div style={{ fontFamily:'Sora,sans-serif', fontWeight:700, fontSize:'1.8rem', color:'var(--accent)', letterSpacing:'-0.03em' }}>{n}</div>
                   <div style={{ fontFamily:'JetBrains Mono,monospace', fontSize:10, color:'var(--text-3)', marginTop:4, letterSpacing:'0.08em', textTransform:'uppercase' }}>{l}</div>

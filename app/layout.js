@@ -30,14 +30,16 @@ const THEME_SCRIPT = `(function(){
 // ─── Shared site constants ────────────────────────────────────────────────────
 const SITE_URL  = 'https://www.rajaramyadav.com.np';
 const FULL_NAME = 'Rajaram Yadav';
-const DESC      = 'Rajaram Yadav is a Senior Software Engineer with 6+ years building scalable enterprise systems using Java, Spring Boot, React, Next.js, AWS, and Kubernetes. Based in United States. Available for senior engineering roles and consulting.';
-const OG_IMAGE  = `${SITE_URL}/assets/rajaram-yadav-software-engineer.png`;
+const ROLES     = 'Data Engineer · AI Engineer · Software Engineer · ML Engineer';
+const DESC      =
+  'Rajaram Yadav builds cloud-native data platforms, AI-powered applications, and enterprise distributed systems engineered for scale and real production impact. Fast to learn new stacks, confident shipping to production. Based in Dallas, TX. Open to full-time roles, consulting, and freelance engagements.';
+const OG_IMAGE  = `${SITE_URL}/assets/rajaram-yadav-engineer.png`;
 
 // ─── Root metadata (shared across all pages) ─────────────────────────────────
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default:  `${FULL_NAME} | Senior Software Engineer — Java, Spring Boot, React, AWS`,
+    default:  `${FULL_NAME} | ${ROLES}`,
     template: `%s — ${FULL_NAME}`,
   },
   description: DESC,
@@ -60,22 +62,22 @@ export const metadata = {
     locale: 'en_US',
     url: SITE_URL,
     siteName: `${FULL_NAME} Portfolio`,
-    title: `${FULL_NAME} | Senior Software Engineer — Java, Spring Boot, React, AWS`,
+    title: `${FULL_NAME} | ${ROLES}`,
     description: DESC,
     images: [
       {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: `${FULL_NAME} — Senior Software Engineer`,
+        alt: `${FULL_NAME} — ${ROLES}`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${FULL_NAME} | Senior Software Engineer`,
+    title: `${FULL_NAME} | ${ROLES}`,
     description: DESC,
-    images: [{ url: OG_IMAGE, alt: `${FULL_NAME} — Senior Software Engineer` }],
+    images: [{ url: OG_IMAGE, alt: `${FULL_NAME} — ${ROLES}` }],
   },
   verification: {
     google: 'Dg569p1GB8QfVH5JMRhGwko5EZ7FbJt4Ap1JQ3ukMfg',

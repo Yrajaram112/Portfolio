@@ -23,11 +23,11 @@ export default function Footer({ theme }) {
               </div>
               <div>
                 <div style={{ fontFamily:'Sora,sans-serif', fontWeight:700, fontSize:14, color:'var(--text-1)' }}>Rajaram Yadav</div>
-                <div style={{ fontFamily:'JetBrains Mono,monospace', fontSize:9, color:'var(--accent)', letterSpacing:'0.14em' }}>SENIOR SOFTWARE ENGINEER</div>
+                <div style={{ fontFamily:'JetBrains Mono,monospace', fontSize:9, color:'var(--accent)', letterSpacing:'0.14em' }}>DATA · AI · SOFTWARE · ML</div>
               </div>
             </div>
             <p style={{ fontFamily:'DM Sans,sans-serif', fontSize:13, color:'var(--text-3)', lineHeight:1.7, maxWidth:240 }}>
-              Building scalable systems with Java, Spring Boot, React, and AWS. Open to senior engineering roles.
+              Fast to learn, confident to ship — data platforms, AI applications, and production systems across the stack. Open to full-time, consulting, and freelance.
             </p>
             <div style={{ display:'flex', gap:8, marginTop:14, flexWrap:'wrap' }}>
               {[
@@ -65,7 +65,7 @@ export default function Footer({ theme }) {
             <p style={{ fontFamily:'JetBrains Mono,monospace', fontSize:10, color:'var(--text-3)', letterSpacing:'0.14em', textTransform:'uppercase', marginBottom:14 }}>Connect</p>
             <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:18 }}>
               {[
-                { icon:<FiMail size={13}/>,       href:'mailto:rajaramyadavcse@gmail.com',      label:'rajaramyadavcse@gmail.com' },
+                { icon:<FiMail size={13}/>,       href:'mailto:rajaramyadav.eng@gmail.com',      label:'rajaramyadav.eng@gmail.com' },
                 { icon:<FaLinkedinIn size={12}/>, href:'https://www.linkedin.com/in/yadavrajaram', label:'linkedin.com/in/yadavrajaram' },
                 { icon:<FaYoutube size={13}/>,    href:'https://www.youtube.com/@coderestart',  label:'youtube.com/@coderestart' },
                 { icon:<SiLeetcode size={12}/>,   href:'https://leetcode.com/rajaramyadav',     label:'leetcode.com/rajaramyadav' },
@@ -90,15 +90,6 @@ export default function Footer({ theme }) {
           <div>
             <p style={{ fontFamily:'JetBrains Mono,monospace', fontSize:11, color:'var(--text-3)' }}>
               © {new Date().getFullYear()} Rajaram Yadav · Built with Next.js & Tailwind CSS
-            </p>
-            {/* DreamBig — subtle */}
-            <p style={{ fontFamily:'JetBrains Mono,monospace', fontSize:10, color:'var(--border)', marginTop:3 }}>
-              Also building{' '}
-              <a href="https://www.dreambig.com.np" target="_blank" rel="noopener noreferrer"
-                 style={{ color:'var(--text-3)', textDecoration:'none', transition:'color 0.2s' }}
-                 onMouseEnter={e=>e.target.style.color='var(--accent)'}
-                 onMouseLeave={e=>e.target.style.color='var(--text-3)'}
-              >dreambig.com.np</a>
             </p>
           </div>
           <button onClick={()=>window.scrollTo({top:0,behavior:'smooth'})}

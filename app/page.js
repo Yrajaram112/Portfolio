@@ -2,31 +2,36 @@ import HomeClient from './HomeClient';
 
 const SITE_URL  = 'https://www.rajaramyadav.com.np';
 const FULL_NAME = 'Rajaram Yadav';
-const TITLE     = 'Rajaram Yadav | Senior Software Engineer · AI Engineer · Data Engineer';
-const DESC      = 'Rajaram Yadav is a Senior Software Engineer, AI Engineer, and Data Engineer with 6+ years building scalable enterprise systems, machine-learning pipelines, and data platforms using Java, Spring Boot, Python, React, Next.js, AWS, and Kubernetes. Based in the United States. Available for senior engineering roles and consulting.';
-const OG_IMAGE  = `${SITE_URL}/assets/rajaram-yadav-software-engineer.png`;
+const ROLES     = 'Data Engineer · AI Engineer · Software Engineer · ML Engineer';
+const TITLE     = `${FULL_NAME} | ${ROLES}`;
+const DESC      =
+  'Rajaram Yadav builds cloud-native data platforms, AI-powered applications, and enterprise distributed systems engineered for scale and real production impact. ' +
+  'From lakehouse pipelines and near real-time analytics on AWS, Azure, Snowflake, and Databricks — to RAG architectures, microservices, and full-stack delivery. ' +
+  'Fast to learn new stacks, confident shipping to production. Based in Dallas, TX. Open to full-time roles, consulting, and freelance engagements.';
+const OG_IMAGE  = `${SITE_URL}/assets/rajaram-yadav-engineer.png`;
 const KEYWORDS  = [
   // ── Personal brand
-  'Rajaram Yadav', 'Rajaram Yadav Software Engineer', 'Rajaram Yadav Java Developer',
-  'Rajaram Yadav AI Engineer', 'Rajaram Yadav Data Engineer',
+  'Rajaram Yadav', 'Rajaram Yadav Data Engineer', 'Rajaram Yadav AI Engineer',
+  'Rajaram Yadav ML Engineer', 'Rajaram Yadav Software Engineer',
   'Rajaram Yadav Portfolio', 'Rajaram Yadav United States', 'Rajaram Yadav UMKC',
   'Rajaram Yadav GitHub', 'Rajaram Yadav LinkedIn', 'Rajaram Yadav LeetCode',
   'Rajaram Yadav YouTube CodeRestart',
-  // ── Software Engineering
-  'Senior Software Engineer', 'Java Developer', 'Spring Boot Developer',
-  'Full Stack Developer', 'AWS Cloud Engineer', 'React Developer', 'Next.js Developer',
-  'Microservices Architect', 'System Design Expert', 'Cloud Engineer',
-  'Backend Engineer', 'Software Architect Nepal',
-  // ── AI / ML Engineering
-  'AI Engineer', 'Machine Learning Engineer', 'LLM Engineer', 'Generative AI Engineer',
-  'MLOps Engineer', 'Deep Learning Engineer', 'NLP Engineer',
-  'LangChain Developer', 'OpenAI API Developer', 'RAG Engineer',
-  'AI Application Developer', 'Prompt Engineer',
   // ── Data Engineering
-  'Data Engineer', 'Data Pipeline Engineer', 'ETL Developer',
-  'Apache Spark Developer', 'Apache Kafka Developer', 'Airflow Developer',
-  'dbt Developer', 'Snowflake Developer', 'BigQuery Engineer',
-  'Data Warehouse Engineer', 'Data Platform Engineer', 'Analytics Engineer',
+  'Data Engineer', 'Data Pipeline Engineer', 'ETL Developer', 'ELT Developer',
+  'Lakehouse Architect', 'Data Platform Engineer', 'Analytics Engineer',
+  'Apache Spark Developer', 'Databricks Engineer', 'dbt Developer',
+  'Snowflake Developer', 'BigQuery Engineer', 'Redshift Engineer',
+  'Apache Airflow Developer', 'Apache Kafka Developer', 'AWS Glue Developer',
+  'Azure Data Factory Developer', 'Delta Lake', 'Medallion Architecture',
+  // ── AI / ML Engineering
+  'AI Engineer', 'ML Engineer', 'Machine Learning Engineer', 'MLOps Engineer',
+  'Generative AI Engineer', 'LLM Engineer', 'RAG Engineer', 'LangChain Developer',
+  'Azure OpenAI Developer', 'AWS Bedrock Engineer', 'OpenAI API Developer',
+  'Vector Database Engineer', 'Prompt Engineer', 'AI Agent Developer',
+  // ── Software Engineering
+  'Software Engineer', 'Full Stack Developer', 'Java Developer', 'Spring Boot Developer',
+  'Backend Engineer', 'Microservices Architect', 'Cloud Engineer', 'AWS Cloud Engineer',
+  'React Developer', 'Angular Developer', 'Next.js Developer', 'System Design',
 ].join(', ');
 
 // ─── JSON-LD Schemas ──────────────────────────────────────────────────────────
@@ -38,26 +43,36 @@ const PERSON_SCHEMA = {
   givenName: 'Rajaram',
   familyName: 'Yadav',
   jobTitle: [
-    'Senior Software Engineer',
-    'AI Engineer',
     'Data Engineer',
+    'AI Engineer',
+    'Software Engineer',
+    'ML Engineer',
   ],
   description: DESC,
   url: SITE_URL,
   image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
-  email: 'rajaramyadavcse@gmail.com',
+  email: 'rajaramyadav.eng@gmail.com',
   knowsAbout: [
-    // Software Engineering
-    'Java', 'Spring Boot', 'React', 'Next.js', 'AWS', 'Kubernetes',
-    'Microservices', 'System Design', 'PostgreSQL', 'Docker', 'REST APIs',
-    // AI / ML
-    'Machine Learning', 'Deep Learning', 'Natural Language Processing',
-    'Large Language Models', 'LangChain', 'OpenAI API', 'Retrieval-Augmented Generation',
-    'MLOps', 'TensorFlow', 'PyTorch', 'Hugging Face',
     // Data Engineering
-    'Python', 'Apache Spark', 'Apache Kafka', 'Apache Airflow',
-    'dbt', 'Snowflake', 'BigQuery', 'ETL Pipelines',
-    'Data Warehousing', 'Data Modeling', 'Redshift', 'Delta Lake',
+    'Apache Spark', 'Databricks', 'Snowflake', 'dbt', 'Apache Airflow', 'Dagster',
+    'AWS Glue', 'Azure Data Factory', 'Delta Lake', 'Amazon Redshift', 'BigQuery',
+    'Apache Kafka', 'AWS Kinesis', 'ETL Pipelines', 'Data Warehousing',
+    'Lakehouse Architecture', 'Medallion Architecture', 'Data Mesh',
+    'Great Expectations', 'Terraform', 'Microsoft Fabric',
+    // AI / ML
+    'Machine Learning', 'MLOps', 'MLflow', 'AWS SageMaker',
+    'Large Language Models', 'Retrieval-Augmented Generation',
+    'LangChain', 'LlamaIndex', 'Azure OpenAI', 'AWS Bedrock', 'OpenAI API',
+    'Generative AI', 'Hugging Face', 'Vector Databases', 'Prompt Engineering',
+    'Scikit-learn', 'Feature Engineering', 'Model Deployment',
+    // Software Engineering
+    'Java', 'Spring Boot', 'Spring Cloud', 'Spring Security', 'Python', 'Go',
+    'TypeScript', 'JavaScript', 'React', 'Angular', 'Next.js', 'Node.js',
+    'Microservices', 'REST APIs', 'GraphQL', 'OAuth2',
+    'AWS', 'Azure', 'GCP', 'Kubernetes', 'Docker', 'Helm',
+    'PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'DynamoDB',
+    'Apache Kafka', 'RabbitMQ', 'Splunk', 'Datadog', 'Grafana',
+    'HIPAA', 'PCI DSS', 'SOC 2', 'FHIR',
   ],
   alumniOf: [
     { '@type': 'CollegeOrUniversity', name: 'University of Missouri - Kansas City' },
@@ -76,28 +91,33 @@ const PERSON_SCHEMA = {
   ],
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Charlotte',
-    addressRegion: 'NC',
+    addressLocality: 'Dallas',
+    addressRegion: 'TX',
     addressCountry: 'US',
   },
   hasOccupation: [
     {
       '@type': 'Occupation',
-      name: 'Senior Software Engineer',
-      occupationLocation: { '@type': 'City', name: 'Charlotte' },
+      name: 'Data Engineer',
+      occupationLocation: { '@type': 'City', name: 'Dallas' },
     },
     {
       '@type': 'Occupation',
       name: 'AI Engineer',
-      occupationLocation: { '@type': 'City', name: 'Charlotte' },
+      occupationLocation: { '@type': 'City', name: 'Dallas' },
     },
     {
       '@type': 'Occupation',
-      name: 'Data Engineer',
-      occupationLocation: { '@type': 'City', name: 'Charlotte' },
+      name: 'Software Engineer',
+      occupationLocation: { '@type': 'City', name: 'Dallas' },
+    },
+    {
+      '@type': 'Occupation',
+      name: 'ML Engineer',
+      occupationLocation: { '@type': 'City', name: 'Dallas' },
     },
   ],
-  worksFor: { '@type': 'Organization', name: 'Freelance / Consulting' },
+  worksFor: { '@type': 'Organization', name: 'Open to Full-Time · Consulting · Freelance' },
 };
 
 const WEBSITE_SCHEMA = {
@@ -132,12 +152,12 @@ const WEBPAGE_SCHEMA = {
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  serviceType: 'Software Development, AI Engineering & Data Engineering Consulting',
+  serviceType: 'Data Engineering, AI Engineering, Software Engineering & ML Engineering Consulting',
   provider: { '@id': `${SITE_URL}/#person` },
   areaServed: 'United States',
   description:
-    'Enterprise-grade Java Full Stack development, AI/ML application engineering, ' +
-    'LLM integration and RAG pipelines, and end-to-end data platform & ETL pipeline design.',
+    'Cloud-native data platform design, AI and LLM application engineering, enterprise microservices, ' +
+    'and production ML pipelines — built for high-scale, real-time workloads.',
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Engineering Services',
@@ -146,24 +166,40 @@ const SERVICE_SCHEMA = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Senior Software Engineering',
-          description: 'Microservices, Java Spring Boot, React/Next.js, AWS, Kubernetes.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'AI / ML Engineering',
-          description: 'LLM fine-tuning, RAG pipelines, LangChain, OpenAI API, MLOps.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
           name: 'Data Engineering',
-          description: 'ETL pipelines, Apache Spark, Kafka, Airflow, Snowflake, dbt, BigQuery.',
+          description:
+            'Lakehouse and Medallion architectures, batch and real-time pipelines with Spark, Kafka, Airflow, dbt, ' +
+            'AWS Glue, Azure Data Factory, Snowflake, Databricks, and Redshift — with data quality, lineage, and governance.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'AI Engineering',
+          description:
+            'RAG pipelines, LLM integrations, Azure OpenAI, AWS Bedrock, LangChain, vector databases, ' +
+            'and AI-assisted data validation for enterprise search and automated insights.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Software Engineering',
+          description:
+            'Enterprise microservices with Java, Spring Boot, Spring Cloud, React, Angular, and Next.js — ' +
+            'REST/GraphQL APIs, event-driven systems, AWS/Azure deployment, CI/CD, and production observability.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'ML Engineering',
+          description:
+            'End-to-end ML lifecycle with MLflow, SageMaker, Databricks ML, feature engineering, ' +
+            'experiment tracking, and real-time and batch model deployment at scale.',
         },
       },
     ],
@@ -189,7 +225,7 @@ export const metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: `${FULL_NAME} — Senior Software Engineer · AI Engineer · Data Engineer`,
+        alt: `${FULL_NAME} — ${ROLES}`,
       },
     ],
     firstName: 'Rajaram',
@@ -202,7 +238,7 @@ export const metadata = {
     images: [
       {
         url: OG_IMAGE,
-        alt: `${FULL_NAME} — Senior Software Engineer · AI Engineer · Data Engineer`,
+        alt: `${FULL_NAME} — ${ROLES}`,
       },
     ],
   },

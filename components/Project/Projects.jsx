@@ -1,145 +1,260 @@
 'use client';
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
 const PROJECTS = [
   {
-    id: 'nepseuncle',
+    id: 'kira',
     num: '01',
+    title: 'KIRA AI',
+    subtitle: 'Voice-Controlled AI Assistant',
+    role: 'Creator · AI & Systems Engineer',
+    desc: 'Personal voice-controlled AI assistant — wake word, local Whisper STT, ElevenLabs TTS, Claude intent routing, and multi-agent orchestration with LangGraph. Browser, email, calendar, files, WhatsApp, and developer agents behind an Electron + Three.js orb UI.',
+    tech: ['Python', 'Claude API', 'LangGraph', 'Whisper', 'ElevenLabs', 'Playwright', 'PostgreSQL', 'pgvector', 'Electron', 'React', 'Docker'],
+    metrics: [{ v: 'Voice', l: 'First' }, { v: 'Multi', l: 'Agent' }, { v: 'Local', l: 'STT' }, { v: 'Private', l: 'Memory' }],
+    url: '',
+    github: 'https://github.com/Yrajaram112/kira',
+    video: '/assets/projects/kira-ai.mp4',
+    poster: '/assets/projects/kira-ai-poster.png',
+    image: null,
+    accent: '#A78BFA',
+    accentRgb: '167,139,250',
+    category: 'AI · Agents',
+    status: 'Open Source',
+    year: '2025',
+    featured: true,
+    emphasis: ['LangGraph', 'Claude API', 'Whisper', 'Playwright', 'pgvector'],
+    emoji: '🎙️',
+  },
+  {
+    id: 'jhilko',
+    num: '02',
+    title: 'Jhilko झिल्को',
+    subtitle: 'City-to-City Gift Delivery',
+    role: 'Founder · Full-Stack Engineer',
+    desc: 'Nepal-to-Nepal gift platform — cakes, flowers, and hampers fulfilled by local partners in every city. Surprise delivery via SMS, live Socket.IO GPS tracking, eSewa/Khalti/COD payments, partner KYC, admin ops, and installable PWA.',
+    tech: ['Next.js 16', 'React 19', 'NestJS 11', 'Prisma', 'PostgreSQL', 'Redis', 'BullMQ', 'Socket.IO', 'Turborepo', 'Baato Maps'],
+    metrics: [{ v: 'City', l: 'to City' }, { v: 'Live', l: 'Tracking' }, { v: 'eSewa', l: 'Payments' }, { v: 'PWA', l: 'Ready' }],
+    url: 'https://jhilko.com.np',
+    github: 'https://github.com/Yrajaram112/jhilko',
+    image: '/assets/projects/jhilko.png',
+    accent: '#FB7185',
+    accentRgb: '251,113,133',
+    category: 'Full-Stack · Marketplace',
+    status: 'MVP · Phases 0–5',
+    year: '2025',
+    featured: true,
+    emphasis: ['Next.js 16', 'NestJS 11', 'Socket.IO', 'PostgreSQL', 'Turborepo'],
+    emoji: '🎁',
+  },
+  {
+    id: 'smartretail',
+    num: '03',
+    title: 'SmartRetail 360',
+    subtitle: 'Modern Data Engineering Platform',
+    role: 'Data Engineer · Platform Builder',
+    desc: 'End-to-end retail analytics lakehouse — dlt ingestion, DuckDB + Iceberg storage, dbt medallion models, Great Expectations quality gates, Dagster orchestration, FastAPI serving, Metabase BI, and GitHub Actions CI/CD. Built to demonstrate production-grade DE craft.',
+    tech: ['dlt', 'DuckDB', 'Apache Iceberg', 'dbt', 'Great Expectations', 'Dagster', 'FastAPI', 'Metabase', 'Docker', 'GitHub Actions'],
+    metrics: [{ v: '3', l: 'Medallion' }, { v: '25', l: 'Tests' }, { v: 'dbt', l: 'Lineage' }, { v: 'CI/CD', l: 'Gated' }],
+    url: 'https://github.com/Yrajaram112/smartretail-360',
+    github: 'https://github.com/Yrajaram112/smartretail-360',
+    image: '/assets/projects/smartretail-360.png',
+    accent: '#00D9F5',
+    accentRgb: '0,217,245',
+    category: 'Data Engineering',
+    status: 'Portfolio · Open Source',
+    year: '2025',
+    featured: true,
+    emphasis: ['dbt', 'Dagster', 'DuckDB', 'Great Expectations', 'FastAPI'],
+    emoji: '📊',
+  },
+  {
+    id: 'nepseuncle',
+    num: '04',
     title: 'NEPSE Uncle',
     subtitle: 'Stock Analytics Platform',
     role: 'Founder & Lead Engineer',
-    desc: 'Real-time Nepal Stock Exchange intelligence with live market feeds, candlestick charts, and AI screeners. Scraped with Python + Playwright, served via Spring Boot APIs, deployed on Nginx + PM2 on a Linux VM.',
-    tech: ['Spring Boot', 'Java', 'Python', 'Playwright', 'PostgreSQL', 'Redis', 'Nginx', 'Linux VM', 'Next.js'],
-    metrics: [{ v: '10k+', l: 'Daily Users' }, { v: '<200ms', l: 'Latency' }, { v: '50+', l: 'Stocks' }, { v: '98', l: 'Lighthouse' }],
+    desc: 'Real-time Nepal Stock Exchange intelligence — live market feeds, candlestick charts, and AI screeners. Python + Playwright scraping, Spring Boot APIs, Redis caching, Nginx + PM2 on a Linux VM. Site refresh in progress.',
+    tech: ['Spring Boot', 'Java', 'Python', 'Playwright', 'PostgreSQL', 'Redis', 'Nginx', 'Next.js'],
+    metrics: [{ v: '10k+', l: 'Daily Users' }, { v: '<200ms', l: 'Latency' }, { v: '50+', l: 'Stocks' }, { v: 'AI', l: 'Screeners' }],
     url: 'https://nepseuncle.com',
     github: 'https://github.com/Yrajaram112',
-    accent: '#00D9F5',
-    accentRgb: '0,217,245',
-    category: 'Fintech · Backend',
-    status: 'Live',
+    image: '/assets/projects/nepse-rajaram-yadav-project.png',
+    accent: '#3FB950',
+    accentRgb: '63,185,80',
+    category: 'Data · Backend',
+    status: 'Maintenance',
     year: '2023',
     featured: true,
-    emphasis: ['Spring Boot', 'Python', 'Playwright', 'Nginx', 'Linux VM'],
+    emphasis: ['Spring Boot', 'Python', 'Playwright', 'Redis'],
     emoji: '📈',
   },
   {
-    id: 'tinymash',
-    num: '02',
-    title: 'TinyMash',
-    subtitle: 'Developer Tools · Growth Hacking',
-    role: 'Founder — Building & Marketing',
-    desc: 'Lightweight developer utilities built for speed. Currently in growth mode — aggressive SEO, content distribution, and marketing pushes to get traction. Bootstrapped. No VC. All hustle.',
-    tech: ['Next.js', 'React', 'Tailwind', 'Vercel', 'PostgreSQL', 'SEO', 'Analytics'],
-    metrics: [{ v: 'Growing', l: 'Traffic' }, { v: '<1s', l: 'Load' }, { v: 'SEO', l: 'Optimized' }, { v: '100%', l: 'Bootstrapped' }],
-    url: 'https://tinymash.com',
-    github: 'https://github.com/Yrajaram112',
-    accent: '#F59E0B',
-    accentRgb: '245,158,11',
-    category: 'Dev Tools · SaaS',
-    status: 'Live · Scaling 🚀',
-    year: '2024',
-    featured: true,
-    emphasis: ['Next.js', 'SEO', 'Analytics'],
-    emoji: '⚡',
+    id: 'bato-ghar-naam',
+    num: '05',
+    title: 'Bato Ghar Naam/Map',
+    subtitle: 'Plus Codes & Metric Addressing',
+    role: 'Creator · Geospatial Engineer',
+    desc: 'Open-source web map for Lahan Municipality — click-to-address Plus Codes, OSM road/ward/building layers, and a metric addressing engine aligned with Nepal\'s MAS. Auto-assigns house numbers from road distance; exports CSV and GeoJSON for municipal pilots.',
+    tech: ['React', 'TypeScript', 'Vite', 'MapLibre GL', 'Turf.js', 'RBush', 'OpenStreetMap', 'Plus Codes'],
+    metrics: [{ v: '3.7k', l: 'Buildings' }, { v: '3.3k', l: 'Addressed' }, { v: 'MAS', l: 'Aligned' }, { v: 'OSM', l: 'Export' }],
+    url: '',
+    github: 'https://github.com/Yrajaram112/bato-ghar-naam',
+    image: '/assets/projects/bato-ghar-naam.png',
+    accent: '#0EA5E9',
+    accentRgb: '14,165,233',
+    category: 'Geospatial · Civic Tech',
+    status: 'Proof of Concept',
+    year: '2025',
+    featured: false,
+    emphasis: ['MapLibre GL', 'Turf.js', 'OpenStreetMap', 'Plus Codes'],
+    emoji: '🗺️',
   },
   {
-    id: 'goshortlisted',
-    num: '03',
+    id: 'shortlisted',
+    num: '06',
     title: 'GoShortlisted',
-    subtitle: 'AI Recruitment Engine',
-    role: 'Full-Stack + AI Engineer',
-    desc: 'AI-powered recruitment pipeline — FastAPI backend, LLM-based resume extraction, Celery + Redis for async job processing, and React frontend. Cuts hiring time with intelligent candidate scoring.',
+    subtitle: 'AI Resume Optimizer',
+    role: 'Full-Stack · AI Engineer',
+    desc: 'AI-powered resume optimizer — intelligent parsing, LLM-driven improvements, and a polished applicant experience. Built to ship fast and iterate on real hiring workflows.',
     tech: ['FastAPI', 'Python', 'LLM', 'Redis', 'Celery', 'React', 'PostgreSQL', 'Docker'],
-    metrics: [{ v: 'LLM', l: 'Powered' }, { v: 'Async', l: 'Celery' }, { v: 'FastAPI', l: 'Backend' }, { v: 'Live', l: 'Platform' }],
-    url: 'https://goshortlisted.vercel.app',
-    github: 'https://github.com/Yrajaram112',
+    metrics: [{ v: 'LLM', l: 'Powered' }, { v: 'Async', l: 'Pipeline' }, { v: 'Resume', l: 'Parsing' }, { v: 'Live', l: 'Deploy' }],
+    url: 'https://goshortlisted.vercel.app/',
+    github: 'https://github.com/Yrajaram112/shortlisted',
+    image: '/assets/projects/goshortlisted.png',
     accent: '#3FB950',
     accentRgb: '63,185,80',
     category: 'AI · HR Tech',
     status: 'Live',
     year: '2024',
     featured: false,
-    emphasis: ['FastAPI', 'LLM', 'Redis', 'Celery'],
+    emphasis: ['FastAPI', 'LLM', 'Celery', 'React'],
     emoji: '🎯',
   },
   {
     id: 'sathiai',
-    num: '04',
+    num: '07',
     title: 'Sathi AI',
-    subtitle: 'Nepali AI Companion',
+    subtitle: 'Startup Journey Companion',
     role: 'Co-Founder & Developer',
-    desc: 'AI companion built for Nepali users — conversational, culturally aware, and making AI accessible in local language and context. LLM backbone with custom prompt engineering for Nepali cultural nuance.',
+    desc: 'AI companion for Nepal\'s startup ecosystem — conversational guidance, culturally aware prompts, and accessible AI for founders navigating their first build. LLM backbone with a focused product UX.',
     tech: ['Next.js', 'OpenAI API', 'Python', 'FastAPI', 'Vercel', 'PostgreSQL'],
-    metrics: [{ v: 'Nepali', l: 'Language' }, { v: 'LLM', l: 'Powered' }, { v: 'Local', l: 'Context' }, { v: 'Live', l: 'Product' }],
+    metrics: [{ v: 'Nepali', l: 'Context' }, { v: 'LLM', l: 'Powered' }, { v: 'Startup', l: 'Focused' }, { v: 'Live', l: 'Product' }],
     url: 'https://sathiai.vercel.app',
-    github: 'https://github.com/Yrajaram112',
+    github: 'https://github.com/Yrajaram112/SathiAI',
+    image: '/assets/projects/sathi-ai.png',
     accent: '#A78BFA',
     accentRgb: '167,139,250',
-    category: 'AI · Localization',
+    category: 'AI · Product',
     status: 'Live',
     year: '2024',
     featured: false,
-    emphasis: ['OpenAI API', 'FastAPI', 'Python'],
+    emphasis: ['OpenAI API', 'Next.js', 'FastAPI'],
     emoji: '🤖',
   },
   {
-    id: 'loveyouai',
-    num: '05',
-    title: 'LoveYou AI',
-    subtitle: 'A Love Letter, Built Into a Link 💌',
-    role: 'Creator · Because why not',
-    desc: 'AI-crafted love letters with shareable links and chaotic interactive UI — the "No" button literally runs away. Make her feel like the universe rearranged itself. Built with Sanity CMS, Framer Motion, and pure mischief.',
-    tech: ['Next.js', 'Framer Motion', 'Sanity CMS', 'OpenAI API', 'Vercel', 'React'],
-    metrics: [{ v: '💌', l: 'AI Crafted' }, { v: '🔗', l: 'Shareable' }, { v: '😈', l: 'No Runs Away' }, { v: '💥', l: 'Interactive' }],
-    url: 'https://loveyouai.vercel.app',
-    github: 'https://github.com/Yrajaram112',
-    accent: '#F472B6',
-    accentRgb: '244,114,182',
-    category: 'Fun · AI',
-    status: 'Live · Zero Cringe',
-    year: '2025',
-    featured: false,
-    emphasis: ['Framer Motion', 'OpenAI API', 'Sanity CMS'],
-    emoji: '💌',
-  },
-  {
     id: 'dreambig',
-    num: '06',
+    num: '08',
     title: 'Dream Big Nepal',
     subtitle: 'Education & Empowerment Platform',
     role: 'Full-Stack Developer',
-    desc: 'Platform empowering young Nepalis with success stories, mentorship connections, and scholarship resources. Free, accessible, and built to bridge aspiration and action for the next generation.',
-    tech: ['Next.js', 'React', 'PostgreSQL', 'Tailwind', 'Node.js', 'Vercel'],
-    metrics: [{ v: 'Nepal', l: 'Focused' }, { v: 'Youth', l: 'Platform' }, { v: 'Free', l: 'Access' }, { v: 'Live', l: 'Site' }],
+    desc: 'Platform connecting young Nepalis with mentorship, scholarships, and success stories — bridging aspiration and action through an accessible, content-rich web experience.',
+    tech: ['Next.js', 'React', 'Tailwind', 'Node.js', 'Vercel'],
+    metrics: [{ v: 'Mentors', l: 'Network' }, { v: 'Scholarships', l: 'Hub' }, { v: 'Youth', l: 'Focused' }, { v: 'Live', l: 'Site' }],
     url: 'https://dreambig.com.np',
-    github: 'https://github.com/Yrajaram112',
+    github: 'https://github.com/Yrajaram112/dream-big',
+    image: '/assets/projects/dreambig.png',
     accent: '#FB7185',
     accentRgb: '251,113,133',
-    category: 'EdTech',
+    category: 'EdTech · Community',
     status: 'Live',
     year: '2024',
     featured: false,
-    emphasis: ['Next.js', 'Node.js'],
+    emphasis: ['Next.js', 'React', 'Tailwind'],
     emoji: '🌟',
   },
   {
+    id: 'reedyengineering',
+    num: '09',
+    title: 'Reedy Engineering',
+    subtitle: 'Precast & Construction Services',
+    role: 'Full-Stack Developer',
+    desc: 'Marketing site for a precast and engineering services company — service showcases, team profiles, and a clean responsive frontend built for credibility and lead generation.',
+    tech: ['Next.js', 'React', 'Tailwind', 'Vercel'],
+    metrics: [{ v: 'Precast', l: 'Services' }, { v: 'Responsive', l: 'UI' }, { v: 'SEO', l: 'Ready' }, { v: 'Live', l: 'Deploy' }],
+    url: 'https://reddyengineering.com',
+    github: 'https://github.com/Yrajaram112/reedyengineering',
+    image: '/assets/projects/reedyengineering-2.png',
+    accent: '#F59E0B',
+    accentRgb: '245,158,11',
+    category: 'Web · Business',
+    status: 'Live',
+    year: '2024',
+    featured: false,
+    emphasis: ['Next.js', 'React', 'Tailwind'],
+    emoji: '🏗️',
+  },
+  {
+    id: 'tinymash',
+    num: '10',
+    title: 'TinyMash',
+    subtitle: 'Safe Learning Game for Toddlers',
+    role: 'Creator · Full-Stack Engineer',
+    desc: 'Live at tinymash.com — a COPPA-safe keyboard and touch game that speaks words and letters, helping toddlers learn meaningfully while having full fun. Seven magical worlds, pentatonic music on every tap, creatures that persist on screen, and parent-locked controls. Zero ads, zero data, free forever.',
+    tech: ['Next.js', 'React', 'Web Audio API', 'Speech Synthesis', 'Canvas', 'Vercel', 'TypeScript'],
+    metrics: [{ v: '7', l: 'Worlds' }, { v: '50+', l: 'Creatures' }, { v: 'COPPA', l: 'Safe' }, { v: 'Free', l: 'Forever' }],
+    url: 'https://www.tinymash.com/',
+    github: 'https://github.com/Yrajaram112/babyworld',
+    image: '/assets/projects/tinymash-1.png',
+    accent: '#F59E0B',
+    accentRgb: '245,158,11',
+    category: 'EdTech · Kids',
+    status: 'Live',
+    year: '2025',
+    featured: false,
+    emphasis: ['Next.js', 'Speech Synthesis', 'Web Audio API'],
+    emoji: '🦆',
+  },
+  {
+    id: 'kusomalumni',
+    num: '11',
+    title: 'KUSOM Alumni',
+    subtitle: 'Alumni Network Platform',
+    role: 'Full-Stack Developer',
+    desc: 'Full-stack Django platform for Kathmandu University School of Management — alumni directory, messaging, posts, event management, and community interaction. eSewa payment integration for event registrations and donations. Built for real alumni engagement at scale.',
+    tech: ['Django', 'Python', 'PostgreSQL', 'Celery', 'Redis', 'AWS EC2', 'Nginx', 'eSewa', 'Bootstrap'],
+    metrics: [{ v: '2k+', l: 'Alumni' }, { v: 'eSewa', l: 'Payments' }, { v: 'Events', l: 'Module' }, { v: 'Live', l: 'Platform' }],
+    url: 'https://kusomalumni.org',
+    github: 'https://github.com/Yrajaram112',
+    image: '/assets/projects/kusomalumni.png',
+    accent: '#00D9F5',
+    accentRgb: '0,217,245',
+    category: 'Full-Stack · Community',
+    status: 'Live',
+    year: '2023',
+    featured: false,
+    emphasis: ['Django', 'PostgreSQL', 'eSewa', 'Celery'],
+    emoji: '🎓',
+  },
+  {
     id: 'portfolio',
-    num: '07',
+    num: '12',
     title: 'This Portfolio',
     subtitle: 'Personal Brand · Dev Showcase',
     role: 'Design · Development · SEO',
-    desc: 'Hand-crafted from zero — obsessive attention to performance, micro-animations, dark/light theming, and a design language that is genuinely mine. 98 Lighthouse. Sub-second load. Zero templates.',
-    tech: ['Next.js', 'Tailwind', 'CSS Modules', 'Vercel'],
-    metrics: [{ v: '98', l: 'Lighthouse' }, { v: '<1s', l: 'Load Time' }, { v: '100%', l: 'Custom' }, { v: 'A+', l: 'Perf Grade' }],
-    url: '#',
+    desc: 'Hand-crafted from zero — performance-tuned, micro-animated, dark/light themed, and SEO-optimized across Data, AI, Software, and ML engineering. Fast to load, confident to present, built to ship.',
+    tech: ['Next.js', 'React', 'CSS Modules', 'JSON-LD', 'Vercel'],
+    metrics: [{ v: 'SEO', l: 'Optimized' }, { v: '<1s', l: 'Load' }, { v: '100%', l: 'Custom' }, { v: '4', l: 'Domains' }],
+    url: 'https://www.rajaramyadav.com.np',
     github: 'https://github.com/Yrajaram112',
+    image: '/assets/projects/rajaram-portfolio.png',
     accent: '#00D9F5',
     accentRgb: '0,217,245',
     category: 'Portfolio',
     status: "You're here",
-    year: '2024',
+    year: '2025',
     featured: false,
-    emphasis: ['Next.js', 'CSS Modules'],
+    emphasis: ['Next.js', 'JSON-LD', 'CSS Modules'],
     emoji: '🚀',
   },
 ];
@@ -158,6 +273,88 @@ function useInView(threshold = 0.1, delay = 0) {
     return () => obs.disconnect();
   }, [threshold, delay]);
   return [ref, visible];
+}
+
+function FeaturedVisual({ project, hovered, accentRgb }) {
+  const videoRef = useRef(null);
+  const panelRef = useRef(null);
+
+  useEffect(() => {
+    if (!project.video || !videoRef.current || !panelRef.current) return;
+    const vid = videoRef.current;
+    const obs = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) vid.play().catch(() => {});
+        else vid.pause();
+      },
+      { threshold: 0.2 }
+    );
+    obs.observe(panelRef.current);
+    return () => obs.disconnect();
+  }, [project.video]);
+
+  const mediaStyle = {
+    position: 'absolute',
+    inset: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    opacity: hovered ? 0.92 : 0.78,
+    transition: 'opacity 0.4s',
+  };
+
+  const overlay = (
+    <div style={{
+      position: 'absolute', inset: 0,
+      background: 'linear-gradient(135deg, rgba(13,17,23,0.55) 0%, rgba(13,17,23,0.15) 55%, rgba(13,17,23,0.75) 100%)',
+      zIndex: 1,
+      pointerEvents: 'none',
+    }} />
+  );
+
+  if (project.video) {
+    return (
+      <div ref={panelRef} style={{ position: 'absolute', inset: 0 }}>
+        <video
+          ref={videoRef}
+          src={project.video}
+          poster={project.poster}
+          muted
+          loop
+          playsInline
+          preload="none"
+          disablePictureInPicture
+          aria-label={`${project.title} — ${project.subtitle} demo`}
+          style={mediaStyle}
+        />
+        {overlay}
+      </div>
+    );
+  }
+
+  if (project.image) {
+    return (
+      <>
+        <Image
+          src={project.image}
+          alt={`${project.title} — ${project.subtitle}`}
+          fill
+          sizes="(max-width: 760px) 100vw, 55vw"
+          style={mediaStyle}
+        />
+        {overlay}
+      </>
+    );
+  }
+
+  return (
+    <>
+      <div style={{ position: 'absolute', fontSize: 160, fontFamily: "'Sora',sans-serif", fontWeight: 900, color: `rgba(${accentRgb},0.05)`, lineHeight: 1, userSelect: 'none', letterSpacing: '-0.05em' }}>{project.num}</div>
+      <div style={{ width: 76, height: 76, borderRadius: 22, background: `rgba(${accentRgb},0.08)`, border: `1px solid rgba(${accentRgb},0.18)`, display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.4s ease', transform: hovered ? 'scale(1.12) rotate(6deg)' : 'scale(1) rotate(0deg)', fontSize: 30, zIndex: 2 }}>
+        {project.emoji}
+      </div>
+    </>
+  );
 }
 
 function FeaturedCard({ project, reverse }) {
@@ -218,16 +415,29 @@ function FeaturedCard({ project, reverse }) {
           overflow: 'hidden',
         }}
       >
-        <div style={{ position: 'absolute', fontSize: 160, fontFamily: "'Sora',sans-serif", fontWeight: 900, color: `rgba(${accentRgb},0.05)`, lineHeight: 1, userSelect: 'none', letterSpacing: '-0.05em' }}>{project.num}</div>
-        <div style={{ position: 'absolute', top: 20, left: 20, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+        <div style={{ position: 'absolute', top: 20, left: 20, display: 'flex', gap: 8, flexWrap: 'wrap', zIndex: 3 }}>
           <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 9, padding: '4px 10px', borderRadius: 100, background: `rgba(${accentRgb},0.12)`, color: accent, border: `1px solid rgba(${accentRgb},0.25)`, letterSpacing: '0.1em', textTransform: 'uppercase' }}>{project.category}</span>
           <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 9, padding: '4px 10px', borderRadius: 100, background: 'rgba(63,185,80,0.08)', color: '#3FB950', border: '1px solid rgba(63,185,80,0.2)', letterSpacing: '0.08em' }}>● {project.status}</span>
         </div>
-        <div style={{ position: 'absolute', bottom: 20, right: 20, fontFamily: "'JetBrains Mono',monospace", fontSize: 10, color: 'var(--text-3)', letterSpacing: '0.15em' }}>{project.year}</div>
-        <div style={{ width: 76, height: 76, borderRadius: 22, background: `rgba(${accentRgb},0.08)`, border: `1px solid rgba(${accentRgb},0.18)`, display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.4s ease', transform: hovered ? 'scale(1.12) rotate(6deg)' : 'scale(1) rotate(0deg)', fontSize: 30 }}>
-          {project.emoji}
-        </div>
-        <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: 2, background: `linear-gradient(90deg, transparent, ${accent}, transparent)`, opacity: hovered ? 1 : 0, transition: 'opacity 0.4s' }} />
+        <div style={{ position: 'absolute', bottom: 20, right: 20, fontFamily: "'JetBrains Mono',monospace", fontSize: 10, color: 'var(--text-3)', letterSpacing: '0.15em', zIndex: 3 }}>{project.year}</div>
+        {project.emoji && (project.video || project.image) && (
+          <div style={{
+            position: 'absolute', top: 20, right: 20, zIndex: 3,
+            width: 76, height: 76, borderRadius: 22,
+            background: `rgba(${accentRgb},0.12)`,
+            border: `1px solid rgba(${accentRgb},0.22)`,
+            backdropFilter: 'blur(8px)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            transition: 'transform 0.4s ease, box-shadow 0.4s ease',
+            transform: hovered ? 'scale(1.12) rotate(6deg)' : 'scale(1) rotate(0deg)',
+            fontSize: 30,
+            boxShadow: hovered ? `0 0 28px rgba(${accentRgb},0.25)` : `0 4px 20px rgba(0,0,0,0.35)`,
+          }}>
+            {project.emoji}
+          </div>
+        )}
+        <FeaturedVisual project={project} hovered={hovered} accentRgb={accentRgb} />
+        <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: 2, background: `linear-gradient(90deg, transparent, ${accent}, transparent)`, opacity: hovered ? 1 : 0, transition: 'opacity 0.4s', zIndex: 3 }} />
       </div>
 
       {/* Content Panel */}
@@ -263,15 +473,13 @@ function FeaturedCard({ project, reverse }) {
 
         {/* CTAs */}
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-          {project.url !== '#' ? (
+          {project.url ? (
             <a href={project.url} target="_blank" rel="noopener noreferrer"
               style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '9px 18px', borderRadius: 100, background: accent, color: '#000', fontFamily: "'DM Sans',sans-serif", fontWeight: 700, fontSize: 11, textDecoration: 'none', letterSpacing: '0.06em', textTransform: 'uppercase', transition: 'all 0.25s' }}
               onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = `0 8px 24px rgba(${accentRgb},0.35)`; }}
               onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = 'none'; }}
             >View Live ↗</a>
-          ) : (
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '9px 18px', borderRadius: 100, background: `rgba(${accentRgb},0.08)`, color: accent, border: `1px solid rgba(${accentRgb},0.2)`, fontFamily: "'JetBrains Mono',monospace", fontSize: 10, letterSpacing: '0.08em' }}>● You're here</span>
-          )}
+          ) : null}
           <a href={project.github} target="_blank" rel="noopener noreferrer"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '9px 14px', borderRadius: 100, border: '1px solid var(--border)', color: 'var(--text-2)', fontFamily: "'DM Sans',sans-serif", fontWeight: 600, fontSize: 11, textDecoration: 'none', transition: 'all 0.25s', background: 'transparent' }}
             onMouseEnter={e => { e.currentTarget.style.borderColor = accent; e.currentTarget.style.color = accent; }}
@@ -304,7 +512,20 @@ function GridCard({ project, index }) {
     >
       <div style={{ height: 3, background: `linear-gradient(90deg, ${accent}, transparent)`, opacity: hovered ? 1 : 0.25, transition: 'opacity 0.4s' }} />
 
-      <div style={{ padding: '18px 22px 0', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 10 }}>
+      {project.image && (
+        <div style={{ position: 'relative', height: 148, background: '#0D1117', overflow: 'hidden' }}>
+          <Image
+            src={project.image}
+            alt={`${project.title} preview`}
+            fill
+            sizes="(max-width: 760px) 100vw, 360px"
+            style={{ objectFit: 'cover', opacity: hovered ? 0.95 : 0.82, transition: 'opacity 0.35s' }}
+          />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,17,23,0.65), transparent 55%)' }} />
+        </div>
+      )}
+
+      <div style={{ padding: project.image ? '16px 22px 0' : '18px 22px 0', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 10 }}>
         <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 44, fontWeight: 900, color: hovered ? `rgba(${accentRgb},0.18)` : `rgba(${accentRgb},0.07)`, lineHeight: 1, letterSpacing: '-0.04em', userSelect: 'none', transition: 'color 0.3s' }}>{project.num}</div>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 5 }}>
           <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 8.5, padding: '3px 9px', borderRadius: 100, background: `rgba(${accentRgb},0.1)`, color: accent, border: `1px solid rgba(${accentRgb},0.22)`, letterSpacing: '0.1em', textTransform: 'uppercase' }}>{project.category}</span>
@@ -342,13 +563,13 @@ function GridCard({ project, index }) {
               onMouseEnter={e => { e.currentTarget.style.borderColor = accent; e.currentTarget.style.color = accent; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text-2)'; }}
             ><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
-            {project.url !== '#' && (
+            {project.url ? (
               <a href={project.url} target="_blank" rel="noopener noreferrer"
                 style={{ width: 30, height: 30, borderRadius: 8, background: `rgba(${accentRgb},0.08)`, border: `1px solid rgba(${accentRgb},0.2)`, display: 'flex', alignItems: 'center', justifyContent: 'center', color: accent, textDecoration: 'none', transition: 'all 0.2s', fontSize: 12 }}
                 onMouseEnter={e => { e.currentTarget.style.background = `rgba(${accentRgb},0.18)`; }}
                 onMouseLeave={e => { e.currentTarget.style.background = `rgba(${accentRgb},0.08)`; }}
               >↗</a>
-            )}
+            ) : null}
           </div>
         </div>
       </div>
@@ -382,7 +603,7 @@ function SectionHeader() {
 }
 
 function TechStrip() {
-  const items = ['Spring Boot', '·', 'Java', '·', 'Python', '·', 'Playwright', '·', 'FastAPI', '·', 'LLM', '·', 'Redis', '·', 'Celery', '·', 'PostgreSQL', '·', 'Next.js', '·', 'React', '·', 'Angular', '·', 'Docker', '·', 'Nginx', '·', 'AWS', '·', 'Linux VM', '·', 'OpenAI', '·', 'Framer Motion', '·', 'Sanity'];
+  const items = ['Spark', '·', 'dbt', '·', 'Dagster', '·', 'LangChain', '·', 'Python', '·', 'Spring Boot', '·', 'NestJS', '·', 'FastAPI', '·', 'Next.js', '·', 'React', '·', 'Kafka', '·', 'PostgreSQL', '·', 'AWS', '·', 'Docker', '·', 'Kubernetes', '·', 'Terraform', '·', 'MapLibre'];
   return (
     <div style={{ overflow: 'hidden', padding: '24px 0', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)', margin: '72px 0 0', position: 'relative' }}>
       <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 100, background: 'linear-gradient(90deg, var(--bg-alt), transparent)', zIndex: 2, pointerEvents: 'none' }} />

@@ -3,91 +3,110 @@ import { useEffect, useRef, useState } from 'react';
 
 const GROUPS = [
   {
-    cat: 'AI & Agents',
+    cat: 'Data Engineering',
+    icon: '📊',
+    color: '#00D9F5',
+    lightColor: '#0369A1',
+    accentRgb: '0,217,245',
+    badge: '🏗 Core Strength',
+    skills: [
+      'Apache Spark', 'PySpark', 'dbt', 'Apache Airflow', 'Dagster',
+      'AWS Glue', 'Azure Data Factory', 'Delta Lake', 'Databricks',
+      'Snowflake', 'BigQuery', 'Amazon Redshift', 'Azure Synapse',
+      'Apache Kafka', 'AWS Kinesis', 'Azure Event Hubs', 'ETL / ELT',
+      'Lakehouse', 'Medallion Architecture', 'Great Expectations', 'Microsoft Fabric',
+    ],
+    emphasis: ['Apache Spark', 'dbt', 'Snowflake', 'Databricks', 'Apache Airflow', 'Apache Kafka'],
+  },
+  {
+    cat: 'AI & Generative AI',
     icon: '🧠',
     color: '#A78BFA',
     lightColor: '#7C3AED',
     accentRgb: '167,139,250',
     badge: '🔥 Core Focus',
     skills: [
-      'OpenAI API', 'Anthropic Claude API', 'LLM Integration', 'Prompt Engineering',
-      'Agentic AI', 'Multi-Agent Systems', 'LangChain', 'LangGraph',
-      'RAG Pipelines', 'Vector DBs', 'Embeddings', 'Tool Calling',
-      'Python', 'FastAPI', 'Celery', 'Web Scraping', 'Playwright',
+      'LangChain', 'LlamaIndex', 'RAG Pipelines', 'Azure OpenAI', 'AWS Bedrock',
+      'OpenAI API', 'Vector DBs', 'Prompt Engineering', 'AI Agents',
+      'LLM Integration', 'Hugging Face', 'Embeddings', 'Tool Calling',
+      'Generative AI', 'AI-Assisted Validation',
     ],
-    emphasis: ['Agentic AI', 'Multi-Agent Systems', 'LangGraph', 'Anthropic Claude API', 'RAG Pipelines'],
+    emphasis: ['RAG Pipelines', 'LangChain', 'Azure OpenAI', 'AWS Bedrock', 'LLM Integration'],
   },
   {
-    cat: 'Backend & Data',
-    icon: '⚙️',
-    color: '#00D9F5',
-    lightColor: '#0369A1',
-    accentRgb: '0,217,245',
-    badge: '🏗 Primary Stack',
-    skills: [
-      'Java', 'Spring Boot', 'Spring Security', 'Microservices', 'REST APIs',
-      'GraphQL', 'gRPC', 'PostgreSQL', 'MySQL', 'Redis',
-      'Kafka', 'RabbitMQ', 'Hibernate', 'JPA', 'Django', 'Node.js',
-      'Elasticsearch',
-    ],
-    emphasis: ['Java', 'Spring Boot', 'Microservices', 'PostgreSQL', 'Redis', 'Kafka'],
-  },
-  {
-    cat: 'DevOps & Cloud',
-    icon: '☁️',
-    color: '#0EA5E9',
-    lightColor: '#0369A1',
-    accentRgb: '14,165,233',
-    badge: '🛰 Infrastructure',
-    skills: [
-      'Nginx', 'PM2', 'Linux VM', 'Docker', 'Kubernetes',
-      'AWS EC2', 'AWS S3', 'AWS Lambda', 'CI/CD', 'GitHub Actions',
-      'Terraform', 'Shell Scripting', 'Process Manager', 'Virtual Machine',
-    ],
-    emphasis: ['Nginx', 'Linux VM', 'Docker', 'Kubernetes', 'AWS EC2', 'PM2'],
-  },
-  {
-    cat: 'AI Dev Tools',
-    icon: '⚡',
+    cat: 'ML & MLOps',
+    icon: '🤖',
     color: '#F59E0B',
     lightColor: '#B45309',
     accentRgb: '245,158,11',
-    badge: '🆕 Daily Driver',
+    badge: '📈 Production ML',
     skills: [
-      'Claude Code', 'Cursor', 'GitHub Copilot', 'Windsurf',
-      'v0 by Vercel', 'Bolt.new', 'Cline', 'Aider',
-      'MCP (Model Context Protocol)', 'Lovable', 'AI pair programming',
-      'Vibe coding workflows',
+      'MLflow', 'AWS SageMaker', 'Databricks ML', 'Scikit-learn', 'Pandas', 'Polars',
+      'Feature Engineering', 'Model Deployment', 'Experiment Tracking',
+      'Batch Inference', 'Real-Time Inference', 'Hugging Face Transformers',
     ],
-    emphasis: ['Claude Code', 'Cursor', 'MCP (Model Context Protocol)', 'Windsurf', 'v0 by Vercel'],
+    emphasis: ['MLflow', 'AWS SageMaker', 'Model Deployment', 'Feature Engineering'],
   },
   {
-    cat: 'Frontend',
+    cat: 'Software Engineering',
+    icon: '⚙️',
+    color: '#0EA5E9',
+    lightColor: '#0369A1',
+    accentRgb: '14,165,233',
+    badge: '⚡ Full Stack',
+    skills: [
+      'Java 17', 'Spring Boot', 'Spring Cloud', 'Spring Security', 'Spring Data JPA',
+      'Python', 'Go', 'Node.js', 'Express.js', 'Microservices',
+      'REST APIs', 'GraphQL', 'OAuth2', 'JWT', 'Hibernate',
+      'Kong', 'Apigee', 'Spring Cloud Gateway', 'MuleSoft', 'AWS API Gateway',
+      'PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'DynamoDB',
+      'RabbitMQ', 'AWS SQS', 'AWS SNS',
+    ],
+    emphasis: ['Java 17', 'Spring Boot', 'Spring Cloud Gateway', 'Kong', 'Microservices'],
+  },
+  {
+    cat: 'Cloud & DevOps',
+    icon: '☁️',
+    color: '#3FB950',
+    lightColor: '#16A34A',
+    accentRgb: '63,185,80',
+    badge: '🛰 Infrastructure',
+    skills: [
+      'AWS', 'Azure', 'GCP', 'Terraform', 'Docker', 'Kubernetes', 'Helm',
+      'Jenkins', 'GitHub Actions', 'Azure DevOps', 'CI/CD Pipelines',
+      'Datadog', 'Splunk', 'Grafana', 'Prometheus', 'OpenTelemetry',
+      'CloudWatch', 'ELK Stack', 'IAM', 'Secrets Manager',
+    ],
+    emphasis: ['AWS', 'Azure', 'Terraform', 'Docker', 'Kubernetes'],
+  },
+  {
+    cat: 'Frontend & Analytics',
     icon: '🎨',
     color: '#7C3AED',
     lightColor: '#6D28D9',
     accentRgb: '124,58,237',
-    badge: '🖼 Full-Stack',
+    badge: '🖼 Interfaces',
     skills: [
-      'Next.js', 'React', 'Angular', 'TypeScript', 'JavaScript',
-      'Tailwind CSS', 'Framer Motion', 'Redux', 'HTML5', 'CSS3',
-      'Sanity CMS', 'Vercel',
+      'React', 'Next.js', 'Angular', 'TypeScript', 'JavaScript',
+      'HTML5', 'CSS3', 'Redux', 'RxJS', 'NgRx', 'Bootstrap',
+      'Power BI', 'Tableau', 'Looker', 'Metabase', 'QuickSight',
+      'Git', 'Agile / Scrum', 'TDD', 'System Design',
     ],
-    emphasis: ['Next.js', 'React', 'Angular', 'Framer Motion'],
+    emphasis: ['React', 'Next.js', 'Angular', 'TypeScript'],
   },
   {
-    cat: 'Tools & Practices',
-    icon: '🛠️',
-    color: '#3FB950',
-    lightColor: '#16A34A',
-    accentRgb: '63,185,80',
-    badge: '📐 Engineering',
+    cat: 'AI Dev Tools',
+    icon: '⚡',
+    color: '#EC4899',
+    lightColor: '#BE185D',
+    accentRgb: '236,72,153',
+    badge: '🆕 Daily Driver',
     skills: [
-      'Git', 'GitHub', 'System Design', 'Agile / Scrum',
-      'TDD', 'Code Review', 'JIRA', 'Pair Programming',
-      'MongoDB', 'Elasticsearch', 'GraphQL',
+      'Cursor', 'Claude Code', 'GitHub Copilot', 'Windsurf',
+      'MCP (Model Context Protocol)', 'v0 by Vercel', 'Cline', 'Aider',
+      'Bolt.new', 'AI Pair Programming',
     ],
-    emphasis: ['System Design', 'TDD'],
+    emphasis: ['Cursor', 'Claude Code', 'GitHub Copilot', 'MCP (Model Context Protocol)'],
   },
 ];
 
@@ -217,7 +236,7 @@ export default function Skills({ theme }) {
             What I bring{' '}<span className="grad-text">to the table</span>.
           </h2>
           <p style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 10, color: 'var(--text-3)', letterSpacing: '0.06em' }}>
-            // AI · Agents · Backend · DevOps · Frontend · AI Dev Tools
+            // Data · AI · ML · Software · Cloud · Frontend · Dev Tools
           </p>
         </div>
 
@@ -228,7 +247,7 @@ export default function Skills({ theme }) {
         </div>
 
         <p style={{ textAlign: 'center', marginTop: 60, fontFamily: "'Sora',sans-serif", fontSize: '1.1rem', fontStyle: 'italic', color: 'var(--text-3)', fontWeight: 300 }}>
-          &ldquo;Ship with AI. Build what matters. Stay curious.&rdquo;
+          &ldquo;Fast to learn. Confident to ship. Built for production.&rdquo;
         </p>
       </div>
     </section>
